@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Gleixner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="./" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <a href="./index.html"
+            ><img class="logo" src="./IMG/logo.png" alt="Peter Gleixner Logo"
+          /></a>
+        </div>
+        <nav>
+          <a onclick="activate('bookButton', 'books')" href="#info">Bücher</a>
+          <a onclick="activate('practiceButton', 'practice')" href="#info"
+            >Praxis</a
+          >
+          <a onclick="activate('aboutMeButton', 'aboutMe')" href="#info"
+            >Über mich</a
+          >
+        </nav>
+      </header>
+      <main>
+        <section id="overview" class="flex"></section>
+        <section id="info">
+          <div class="infoMenu flex">
+            <button
+              id="bookButton"
+              onclick="activate('bookButton', 'books')"
+              class="activ"
+            >
+              Bücher
+            </button>
+            <button
+              id="practiceButton"
+              onclick="activate('practiceButton', 'practice')"
+            >
+              Praxis
+            </button>
+            <button
+              id="aboutMeButton"
+              onclick="activate('aboutMeButton', 'aboutMe')"
+            >
+              Über Mich
+            </button>
+          </div>
+          <div>
+            <div id="books" class="books">
+              <div class="list flex">
+                <div id="newestBook" class="flex"></div>
+                <div id="moreBooks" class="flex"></div>
+              </div>
+            </div>
+            <div class="none" id="practice"></div>
+            <div class="none" id="aboutMe">
+              <div id="aMinfos"></div>
+              <div id="workContainer" class="aboutBottom"></div>
+              <div id="artContainer" class="aboutBottom none"></div>
+              <div id="allBooks" class="aboutBottom none"></div>
+              <div id="aboutCarousel" class="aboutBottom carousel none"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a href="./imprint.html">Impressum</a>
+        <button onclick="">Kontakt</button>
+        <a href="./privacy.html">Datenschutz</a>
+      </footer>
+    </div>
+  </body>
+</html>
+

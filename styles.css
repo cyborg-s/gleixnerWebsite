@@ -1,0 +1,582 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.align{
+    align-items: center;
+}
+
+.page {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.aboutBottom {
+    margin-top: 48px!important;
+    padding-block: 16px;
+    padding-inline: 16px;
+    background-color: rgb(255, 255, 238);
+}
+
+.allBooksList {
+    gap: 4px;
+}
+
+.allBooksList p {
+        font-size: 14px;
+        margin-block: 8px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  padding-right: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #3b6147;
+}
+
+footer button {
+  display: inline-block;
+
+  padding: 6px 20px;
+
+  background: #2b4834;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+  border: 1px solid #5a916c;
+}
+
+.space{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booksButton {
+
+  display: inline-block;
+
+  padding: 6px 20px;
+
+  background: #2b4834;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+  border: 1px solid #5a916c;
+}
+
+.moreHead{
+    text-align: center;
+    width: calc((100vw/3)*2);
+}
+
+.moreBooksButton:hover {
+  background-color: #3b6147;
+}
+
+.mainText {
+  width: 65%;
+}
+
+.profileImg {
+  width: 35%;
+}
+
+#info {
+  padding-inline: 0px;
+}
+
+.infoMenu {
+  gap: 10px;
+  justify-content: center;
+  background-color: #2b4834;
+  padding-inline: 16px;
+  height: 60px;
+  align-items: center;
+}
+
+.infoMenu button {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  background-color: #2b4834;
+  border: 1px solid #5a916c;
+}
+
+.infoMenu button:hover {
+  background-color: #3b6147;
+}
+
+.activ {
+  background-color: white !important;
+  color: #2b4834 !important;
+}
+
+#books {
+  height: fit-content;
+  margin-block: 16px;
+}
+
+.newBook {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  max-width: 480px;
+  width: calc(100vw / 3);
+  align-items: center;
+  height: 100%;
+}
+
+.list {
+  width: 100vw;
+  overflow-x: auto;
+  height: fit-content;
+ margin-inline: 16px;
+ padding-bottom: 40px;
+}
+
+.moreList {
+    height: 80%;
+}
+
+#practice {
+  height: 100%;
+  margin-block: 16px;
+  padding-inline: 16px;
+}
+
+#aboutMe {
+  height: 100%;
+  margin-block: 16px;
+  padding-inline: 16px;
+  padding-bottom: 45px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  background-color: lightgray;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+  z-index: 2;
+}
+
+.bookCover {
+  width: 160px;
+}
+
+.none {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+#overview {
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+
+  overflow: hidden;
+  padding-bottom: 32px;
+}
+
+.overviewText {
+  width: 55%;
+
+  padding-inline: 16px;
+
+  z-index: 2;
+  
+  
+}
+
+.overviewText h3 {
+  margin-bottom: 10px;
+}
+
+.newBook .descriptionIntro {
+  font-size: 18px;
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 16px !important;
+}
+
+.subDescription {
+  font-size: 12px;
+}
+
+.overviewText h2 {
+  font-size: 28px;
+  margin-block: 0;
+  margin-bottom: 16px;
+}
+
+.overviewText p {
+  line-height: 1.7;
+
+  margin: 0px;
+}
+
+.overviewText a {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background-color: #2b4834;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+  margin-bottom: 8px;
+  
+}
+
+.overviewText a:hover {
+  background-color: #3b6147;
+}
+
+.practice {
+  margin-bottom: 48px;
+  justify-content: space-between;
+}
+
+.routeButton {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background-color: #2b4834;
+  color: white;
+
+  text-decoration: none;
+  margin-top: 16px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 120px;
+}
+
+.routeButton:hover {
+  background-color: #3b6147;
+}
+
+.mapImg {
+  height: 360px;
+}
+
+.overviewImage {
+  width: 45%;
+  height: 500px;
+
+  background-size: cover;
+  background-position: center;
+
+  /* Bild blendet nach links aus */
+  mask-image: linear-gradient(to left, black 65%, transparent 100%);
+
+  -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+}
+
+
+.profileImage {
+  width: 30%;
+  height: 400px;
+
+  background-size: cover;
+  background-position: center;
+
+  /* Bild blendet nach links aus */
+  mask-image: linear-gradient(to right, black 65%, transparent 100%);
+
+  -webkit-mask-image: linear-gradient(to right, black 65%, transparent 100%);
+}
+
+
+.lyrikLink {
+    color: #487456;
+    text-decoration: underline;
+}
+
+.fontSize {
+    font-size: 18px;
+}
+
+.profileInfo {
+    width: 70%;
+}
+
+.aboutMenu{
+    margin-block: 8px;
+    background-color: #2b4834;
+    height: 35px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutMenu button{
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+  color: white;
+  background-color: #2b4834;
+  border: 1px solid #5a916c;
+}
+
+.aboutMenu button:hover{
+    background-color: #3b6147;
+}
+
+
+
+.carousel {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 500px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselViewport {
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.carouselTrack {
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+.carouselSlide {
+
+    position: relative;
+
+    flex: 0 0 70%;
+
+    height: 500px;
+
+    opacity: 0.35;
+
+    transform: scale(0.9);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.slideBackground {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(25px);
+
+    transform: scale(1.15);
+
+    opacity: 0.5;
+
+    z-index: 1;
+}
+
+.carouselSlide.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.carouselSlide img {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+/* Rand zum Bildschirm */
+
+.carousel::before,
+.carousel::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 80px;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.carousel::before {
+
+    left: 0px;
+
+    background:
+        linear-gradient(
+            to right,
+            white,
+            transparent
+        );
+}
+
+.carousel::after {
+
+    right: 0;
+
+    background:
+        linear-gradient(
+            to left,
+            white,
+            transparent
+        );
+}
+
+/* Pfeile */
+
+.carouselArrow {
+
+    position: absolute;
+
+    z-index: 5;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+
+    background:
+        rgba(222, 222, 222, 0.34);
+
+    backdrop-filter: blur(4px);
+
+    transition: .2s;
+}
+
+.carouselArrow:hover {
+
+    background:
+        rgba(255,255,255,.9);
+}
+
+.carouselArrow.left {
+
+    left: 15px;
+}
+
+.carouselArrow.right {
+
+    right: 15px;
+}
