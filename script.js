@@ -159,8 +159,8 @@ function loadAbout(data) {
           <p class="fontSize">geboren 1967 in Amberg,</p>
         </div>
         <p class="fontSize">ist Spachtherapeut, Heilpädagoge, Musiler, Lyriekr, Freizeitbauer und Naturliebhaber.</p>
-        <p class="fontSize">Neben seiner beruflichen Tätigkeit widmet er sich seit vielen Jahren dem Schreiben und hat bereits mehrere <a class="lyrikLink" onclick="lyrik('lyrik')" href="#lyrik">Gedichtsbände</a> veröffentlicht.</p>
-        <wo class="fontSize">Der Autor lebt auf einem kleinen Bauernhof in der Nähe von Amberg wo er Inspiration für sein literarisches Schaffen in der Natur und im ländlichen Leben findet.</>
+        <p class="fontSize">Er hat bereits mehrere <a class="lyrikLink" onclick="aboutActivate('lyrik', 'allBooks')" href="#lyrik">Gedichtsbände</a> veröffentlicht.</p>
+        <p class="fontSize">Der Autor lebt auf einem kleinen Bauernhof in der Nähe von Amberg.</p>
       </div>
     </div>
 
