@@ -1,11 +1,12 @@
 {
   "books": {
     "current": {
-      "title": "Spurenelemente der Kommunikation. <br> Gedanken eines Sprachtherapeuten.",
+      "title": "Spurenelemente der Kommunikation.",
+      "subTitle": "Gedanken eines Sprachtherapeuten.",
       "descriptionIntro": "<b>Inmitten unserer zunehmend technisierten, digitalen Welt steht dieses Buch für eine Rückbesinnung auf das Wesentliche und ist zugleich eine Liebeserklärung an das Leben.</b>",
-      "description": "Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
+      "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
-      "image": "./IMG/buchCoverProvisorium.jpg",
+      "image": "./IMG/buchCover.jpeg",
       "link": "#"
     },
 
@@ -57,9 +58,9 @@
   },
 
   "practice": {
-    "head": "<h2>Peter Gleixner – Praxis für Sprachtherapie</h2>",
+    "head": "Peter Gleixner – Praxis für Sprachtherapie",
     "text": "Sprachtherapeut für Stimm-, Sprech- und Sprachstörungen<br>Heilpädagoge mit Schwerpunkt Sprachheilpädagogik<br>Therapeut für Sensorische Integration (nach Jean Ayres)<br>Psychologische Beratung und Unterstützung ",
-    "contact": "Praxis für Sprachtherapie (alle Kassen)<br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. 09621-33106<br>E-Mail: gleixnerpeter@web.de<br>",
+    "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. 09621-33106<br>E-Mail: gleixnerpeter@web.de<br>",
     "image": "./IMG/map.png"
   },
 
@@ -71,7 +72,7 @@
         "alternateText":""
       },
       {
-        "IMG":"./IMG/IMG2.jpg",
+        "IMG":"./IMG/IMG2.jpeg",
         "alternateText":""
       },
       {
@@ -79,9 +80,19 @@
         "alternateText":""
       },
       {
-        "IMG":"./IMG/IMG4.jpeg",
+        "IMG":"./IMG/IMG5.jpg",
         "alternateText":""
       }
     ]
+  },
+
+  "music": {
+    "list":[
+      {"text":"– seit 1985 als Keyboarder in verschiedenen musikalischen Formationen aktiv"},
+      {"text":"– wurde 1990 bei einem Wettbewerb des RSGI (Regensburger Schriftstellerverband International) unter die zehn besten Nachwuchsschriftsteller gewählt"},
+      {"text":"– gewann 1998 mit der Band „Voice“ das „Blue Note Festival“"},
+      {"text":"–zahlreiche Lyriklesungen mit Musik, mehrere CD-Veröffentlichungen"}
+    ],
+    "description":"Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a> . Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt."
   }
 }

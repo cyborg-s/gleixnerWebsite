@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+
 }
 
 .imprint{
@@ -48,10 +49,15 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+      background-color: #beb2a21d;
 }
 
 .align{
     align-items: center;
+}
+
+.center{
+  justify-content: center;
 }
 
 .page {
@@ -67,6 +73,16 @@ body {
     background-color: rgb(255, 255, 238);
 }
 
+.aboutLink{
+  text-decoration: none;
+  color: #78846f;
+  font-weight: bold;
+}
+
+.aboutLink:hover{
+  text-decoration: underline;
+}
+
 .allBooksList {
     gap: 4px;
 }
@@ -78,21 +94,44 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 16px;
-  height: 60px;
-  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  height: 118px;
+
+  margin-bottom: -11px;
+  z-index: 3;
+}
+
+.overviewCoverDiv{
+  width: 50%;
+}
+
+.overviewCoverShadow{
+
+ 
+  display: inline-block;
+  justify-content: center;
+    border-radius: 8px; 
+      box-shadow: 0 0 20px 10px rgba(111, 107, 107, 0.4); 
+}
+
+.overviewCover {
+  display: block;
+  max-width: 100%;
+  height: 500px;
 }
 
 .logo {
   height: 60px;
+  margin-top: 16px;
 }
 
 nav {
   display: flex;
+  justify-content: space-between;
   gap: 32px;
-  padding-right: 16px;
+  background-color: #9cac90;
+  height: 60px;
 }
 
 nav a {
@@ -120,7 +159,7 @@ button:hover {
 }
 
 footer button:hover {
-  background-color: #3b6147;
+  background-color: #6e6868;
 }
 
 footer button {
@@ -128,13 +167,13 @@ footer button {
 
   padding: 6px 20px;
 
-  background: #2b4834;
+  background: #555050;
   color: white;
 
   text-decoration: none;
 
   border-radius: 5px;
-  border: 1px solid #5a916c;
+  border: 1px solid #7d7676;
 }
 
 .space{
@@ -149,7 +188,7 @@ footer button {
 
   padding: 6px 20px;
 
-  background: #2b4834;
+  background: #555050;
   color: white;
 
   text-decoration: none;
@@ -164,7 +203,7 @@ footer button {
 }
 
 .moreBooksButton:hover {
-  background-color: #3b6147;
+  background-color: #6e6868;
 }
 
 .mainText {
@@ -180,9 +219,10 @@ footer button {
 }
 
 .infoMenu {
-  gap: 10px;
-  justify-content: center;
-  background-color: #2b4834;
+  width: 100%;
+  justify-content: space-around;
+  align-self: center;
+  background-color: #555050;
   padding-inline: 16px;
   height: 60px;
   align-items: center;
@@ -193,22 +233,26 @@ footer button {
   height: 40px;
   border-radius: 10px;
   color: white;
-  background-color: #2b4834;
-  border: 1px solid #5a916c;
+  background-color: #555050;
+  border: 2px solid #7d7676;
 }
 
 .infoMenu button:hover {
-  background-color: #3b6147;
+  background-color: #6e6868;
 }
 
 .activ {
-  background-color: white !important;
-  color: #2b4834 !important;
+  background-color: #d6caca !important;
+  color: #393535 !important;
 }
 
 #books {
   height: fit-content;
-  margin-block: 16px;
+  margin-block: 35px;
+}
+
+.alignLeft{
+  text-align: left;
 }
 
 .newBook {
@@ -237,15 +281,31 @@ footer button {
 
 #practice {
   height: 100%;
-  margin-block: 16px;
+  margin-block: 22px;
   padding-inline: 16px;
 }
 
 #aboutMe {
   height: 100%;
-  margin-block: 16px;
+  margin-block: 22px;
   padding-inline: 16px;
   padding-bottom: 45px;
+}
+
+#music {
+  height: 100%;
+  margin-block: 22px;
+  padding-inline: 16px;
+}
+
+#image {
+  height: 100%;
+  margin-block: 22px;
+  padding-inline: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 footer {
@@ -284,15 +344,20 @@ footer {
   display: flex;
   align-items: center;
 
-  background: white;
+
 
   overflow: hidden;
   padding-bottom: 32px;
 }
 
-.overviewText {
-  width: 55%;
+.overviewTitle{
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
 
+.overviewText {
+  width: 50%;
+ text-align: justify;
   padding-inline: 16px;
 
   z-index: 2;
@@ -300,16 +365,61 @@ footer {
   
 }
 
+
+
 .overviewText h3 {
   margin-bottom: 10px;
 }
 
-.newBook .descriptionIntro {
-  font-size: 18px;
+.overviewHead{
+    width: 100%;
+    margin-left: 25px;
+}
+
+.new{
+  font-size: 1.1875rem;
+}
+
+.overviewSubTitle{
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.pt15{
+  font-size: 1.25rem;
+}
+
+.pt17{
+  font-size: 1.4375rem;
+}
+
+.pt14{
+  font-size: 1.1875rem;
+}
+
+.pt12{
+  font-size: 1rem;
+}
+
+.pt13{
+  font-size: 1.0625rem;
+}
+
+.imgGalery{
+  height: 250px;
+  width: auto;
+}
+
+.musicDescription{
+  text-align: justify;
+}
+
+.descriptionIntro {
+  font-size: 1.0625rem;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 16px !important;
 }
 
@@ -317,16 +427,17 @@ footer {
   font-size: 12px;
 }
 
-.overviewText h2 {
+/* .overviewText h2 {
   font-size: 28px;
   margin-block: 0;
   margin-bottom: 16px;
-}
+} */
 
 .overviewText p {
   line-height: 1.7;
 
   margin: 0px;
+  margin-inline: 16px;
 }
 
 .overviewText a {
@@ -334,7 +445,7 @@ footer {
 
   padding: 14px 28px;
 
-  background-color: #2b4834;
+  background-color: #555050;
   color: white;
 
   text-decoration: none;
@@ -345,11 +456,15 @@ footer {
 }
 
 .overviewText a:hover {
-  background-color: #3b6147;
+  background-color: #6e6868;
 }
 
 .practice {
   margin-bottom: 48px;
+  justify-content: space-between;
+}
+
+.practiceTop{
   justify-content: space-between;
 }
 
@@ -358,7 +473,7 @@ footer {
 
   padding: 14px 28px;
 
-  background-color: #2b4834;
+  background-color: #555050;
   color: white;
 
   text-decoration: none;
@@ -369,8 +484,9 @@ footer {
   width: 120px;
 }
 
+
 .routeButton:hover {
-  background-color: #3b6147;
+  background-color: #6e6868;
 }
 
 .mapImg {
@@ -392,16 +508,16 @@ footer {
 
 
 .profileImage {
-  width: 30%;
-  height: 400px;
+  width: 50%;
+  height: 600px;
 
   background-size: cover;
   background-position: center;
 
   /* Bild blendet nach links aus */
-  mask-image: linear-gradient(to right, black 65%, transparent 100%);
+  mask-image: linear-gradient(to right, black 90%, transparent 100%);
 
-  -webkit-mask-image: linear-gradient(to right, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
 
 
@@ -410,12 +526,10 @@ footer {
     text-decoration: underline;
 }
 
-.fontSize {
-    font-size: 18px;
-}
+
 
 .profileInfo {
-    width: 70%;
+    width: 50%;
 }
 
 .aboutMenu{
@@ -431,12 +545,12 @@ footer {
   height: 25px;
   border-radius: 10px;
   color: white;
-  background-color: #2b4834;
-  border: 1px solid #5a916c;
+  background-color: #555050;
+  border: 1px solid #6a6464;
 }
 
 .aboutMenu button:hover{
-    background-color: #3b6147;
+    background-color: #6e6868;
 }
 
 

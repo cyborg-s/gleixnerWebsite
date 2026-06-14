@@ -12,7 +12,8 @@ async function loadData() {
     loadBooks(data);
     loadPractice(data);
     loadAbout(data);
-    loadCarousel(data);
+    loadImages(data);
+    loadMusic(data);
   } catch (error) {
     console.error("Fehler beim Laden der JSON:", error);
   }
@@ -24,26 +25,23 @@ function loadOverview(data) {
   overViewContainer.innerHTML = `
 
       <div class="overviewText flex column align">
-        <h3>Neuvorstellung</h3>
+        <h2 class="headFont pt15">Peter Gleixner</h2>
+        <h3 class="new">Neuvorstellung meines Buches</h3>
 
-        <h2>${data.books.current.title}</h2>
+        <h2 class="headFont overviewHead overviewTitle alignLeft">${data.books.current.title}</h2>
+        <h3 class="headFont overviewHead overviewSubTitle alignLeft">${data.books.current.subTitle}</h3>
 
         <p class="descriptionIntro">${data.books.current.descriptionIntro}</p>
         <p class="description">${data.books.current.description}</p>
-        <p class="subDescription">${data.books.current.subDescription}</p>
+       
 
         <a href="${data.books.current.link}">
           Jetzt bestellen
         </a>
       </div>
 
-              <div
-            class="overviewImage"
-            style="
-                background-image:
-                url('${data.books.current.image}');
-            "
-        ></div>
+            
+<div class="overviewCoverDiv flex center"><div class="overviewCoverShadow"><img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente"> </div>
 
 
   `;
@@ -116,31 +114,36 @@ function loadPractice(data) {
   const practiceContainer = document.getElementById("practice");
 
   practiceContainer.innerHTML = `
-    <div class="practice flex">
+    <div class="practiceTop flex">
     
       <div>
-        ${data.practice.head}
+        <h2 class="headFont pt14">${data.practice.head}</h2>
         <div class="flex column">
         <div>${data.practice.text}</div>
-        <h3>Kontakt</h3>
-        <div>${data.practice.contact}</div>
-        <a class="routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7">Routenplaner</a>
+        <h3 class="headFont pt13">Universitäre und fachakademische Ausbildung in den Bereichen</h3>
+        <p class="pt12">– Sprecherziehung<br>– Stimmbildung<br>– Spieltherapie<br>– Elternarbeit<br>– Klientenzentrierte Gesprächsführung (nach Ruth Cohn)</p>
+        
         </div>
       </div>
-      <img class="mapImg"
-        src="${data.practice.image}"
-        alt="Mapbild"
-      />
+      <div class="contact">
+      <h3 class="headFont pt14">Kontakt</h3>
+        <div>${data.practice.contact}</div>
+        <a class="routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7">Routenplaner</a>
+      </div>
+
         
+    </div>
+    <div class="practice">
+      <h3 class="headFont pt13">Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
+      <p class="pt12">– von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg<br>– zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</br>
     </div>
   `;
 }
 
 function loadAbout(data) {
   const aboutContainer = document.getElementById("aMinfos");
-  const allBooksContaienr = document.getElementById("allBooks");
-  const workContainer = document.getElementById("workContainer");
-  const artContainer = document.getElementById("artContainer");
+
+
 
   aboutContainer.innerHTML = `
     <div class="flex">
@@ -155,78 +158,26 @@ function loadAbout(data) {
         ></div>
       <div class="profileInfo">
         <div>
-          <h2>Peter Gleixner</h2>
-          <p class="fontSize">geboren 1967 in Amberg,</p>
+          <h2 class="pt17">Peter Gleixner</h2>
+          <p class="pt14">* 1967 in Amberg,</p>
         </div>
-        <p class="fontSize">ist Spachtherapeut, Heilpädagoge, Musiler, Lyriekr, Freizeitbauer und Naturliebhaber.</p>
-        <p class="fontSize">Er hat bereits mehrere <a class="lyrikLink" onclick="aboutActivate('lyrik', 'allBooks')" href="#lyrik">Gedichtsbände</a> veröffentlicht.</p>
-        <p class="fontSize">Der Autor lebt auf einem kleinen Bauernhof in der Nähe von Amberg.</p>
+        <p class="pt12">–  <a class="aboutLink" onclick="activate('practiceButton', 'practice')" href="#practice">Spachtherapeut</a> und staatlich geprüfter Heilpädagoge</p>
+        <p class="pt12">–  <a class="aboutLink" onclick="activate('bookButton', 'books')" href="#lyrik">Lyriker</a></p>
+        <p class="pt12">–  <a class="aboutLink" onclick="activate('musicButton', 'music')" href="#music">Musiker</a></p>
+        <p class="pt12">–  Freizeitbauer</p>
+        <p class="pt12">–  Naturliebhaber</p>
+        <p class="pt12">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</p>
       </div>
-    </div>
+    </div>`;
 
     
-<div class="aboutMenu flex">
-  <button id="work" onclick="aboutActivate('work', 'workContainer')" class="activ">Berufiches</button>
-  <button id="art" onclick="aboutActivate('art', 'artContainer')">Künstlerische Tätigkeit</button>
-  <button id="lyrik" onclick="aboutActivate('lyrik', 'allBooks')">Literarische Veröffentlichungen</button>
-  <button id="img" onclick="aboutActivate('img', 'aboutCarousel')">Bilder</button>
-</div>
-`;
 
-  workContainer.innerHTML = `
-  <h3>Universitäre und fachakademische Ausbildung in den Bereichen</h3>
-
-  <ul>
-  <li>Sprecherziehung</li>
-  <li>Stimmbildung</li>
-  <li>Spieltherapie</li>
-  <li>Elternarbeit</li>
-  <li>Klientenzentrierte Gesprächsführung (nach Ruth Cohn)</li>
-</ul>
-
-  <h3>Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
-
-  <ul>
-    <li>von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg</li>
-    <li>zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungs-schule, München</li>
-  </ul>
-  `;
-
-  artContainer.innerHTML = `
-  <h3>Künstler</h3>
-  <ul>
-    <li>seit 1985 als Keyboarder in verschiedenen musikalischen Formationen aktiv</li>
-    <li>wurde 1990 bei einem Wettbewerb des RSGI (Regensburger Schriftstellerverband International) unter die zehn besten Nachwuchsschriftsteller gewählt</li>
-    <li>gewann 1998 mit der Band „Voice“ das „Blue Note Festival“</li>
-    <li>zahlreiche Lyriklesungen mit Musik, mehrere CD-Veröffentlichungen</li>
-  </ul>
-
-  <p>Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a href="https://heinzgrobmeier.de/">Heinz Grobmeier</a>. Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt.</p>
-
-  `;
-
-  allBooksContaienr.innerHTML = `
-  <h3>Alle Veröffentlichungen</h3>
-  <div>
-  <div class="flex column">
-      <ul>
-        ${data.books.allBooks
-          .map(
-            (book) => `
-              <li><div class="flex allBooksList"><p style="font-weight: bold;">${book.title}</p> <p>${book.info}</p></div></li>
-            `,
-          )
-          .join("")}
-      </ul>      
-      </div>
-  </div>
-  `;
 }
 
 function loadCarousel(data) {
   const pictures = data.aboutInfo.pictures;
 
-  const carousel = document.getElementById("aboutCarousel");
+  const carousel = document.getElementById("carousel");
 
   carousel.innerHTML = `
         <button class="carouselArrow left">&lt;</button>
@@ -312,10 +263,29 @@ function loadCarousel(data) {
   updateCarousel();
 }
 
-function activate(activeButton, activeSection) {
-  const buttons = ["bookButton", "practiceButton", "aboutMeButton"];
+function loadImages(data){
+    const imageContainer = document.getElementById("image");
+    const pictures = data.aboutInfo.pictures;
 
-  const sections = ["books", "practice", "aboutMe"];
+  
+    pictures.forEach((picture) => {
+      imageContainer.innerHTML += `
+
+
+        <img class="imgGalery"
+            src="${picture.IMG}"
+            alt="${picture.alternateText}"
+        >
+
+
+    `;
+  })
+}
+
+function activate(activeButton, activeSection) {
+  const buttons = ["bookButton", "practiceButton", "aboutMeButton", "imageButton", "musicButton"];
+
+  const sections = ["books", "practice", "aboutMe", "image", "music"];
 
   buttons.forEach((button) => {
     document.getElementById(button).classList.remove("activ");
@@ -348,3 +318,20 @@ function aboutActivate(aboutActivButton, aboutActivSection) {
 
   document.getElementById(aboutActivSection).classList.remove("none");
 }
+
+function loadMusic(data){
+  const imageContainer = document.getElementById("music");
+  const list = data.music.list;
+
+  imageContainer.innerHTML =`
+  <h2 class="headFont pt14">Musik</h2>
+  <div id="musicList"></div>
+  <p class="pt12 musicDescription">${data.music.description}</p>
+  `
+
+list.forEach((listItem) => {
+    musicList.innerHTML += `
+    <p>${listItem.text}</p>
+`
+
+})};
