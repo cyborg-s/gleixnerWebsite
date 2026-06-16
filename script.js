@@ -110,7 +110,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/Hugendubel.png" alt="Hugendubel">
+      <img class="shopLinkIco" src="./IMG/hugendubel.png" alt="Hugendubel">
     </a>
   `;
   }
