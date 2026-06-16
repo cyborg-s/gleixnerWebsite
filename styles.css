@@ -1,62 +1,57 @@
 html {
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
-.imprint{
+.imprint {
   margin: 32px;
   margin-bottom: 50px;
 }
 
 .backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+  padding: 10px 18px;
 
-    padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
 
-    border: none;
-    border-radius: 999px;
+  background: #e9e9e9;
 
-    background: #e9e9e9;
+  color: #333;
 
-    color: #333;
+  font-size: 1rem;
+  font-weight: 500;
 
-    font-size: 1rem;
-    font-weight: 500;
+  cursor: pointer;
 
-    cursor: pointer;
-
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .backButton:hover {
+  background: #dcdcdc;
 
-    background: #dcdcdc;
-
-    transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .backButton:active {
-
-    transform: translateX(0);
+  transform: translateX(0);
 }
-
 
 body {
   margin: 0;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-      background-color: #beb2a21d;
+  background-color: #beb2a21d;
 }
 
-.align{
-    align-items: center;
+.align {
+  align-items: center;
 }
 
-.center{
+.center {
   justify-content: center;
 }
 
@@ -67,29 +62,55 @@ body {
 }
 
 .aboutBottom {
-    margin-top: 48px!important;
-    padding-block: 16px;
-    padding-inline: 16px;
-    background-color: rgb(255, 255, 238);
+  margin-top: 48px !important;
+  padding-block: 16px;
+  padding-inline: 16px;
+  background-color: rgb(255, 255, 238);
 }
 
-.aboutLink{
+.aboutLink {
   text-decoration: none;
   color: #78846f;
   font-weight: bold;
 }
 
-.aboutLink:hover{
+.aboutLink:hover {
   text-decoration: underline;
 }
 
 .allBooksList {
-    gap: 4px;
+  gap: 4px;
+}
+
+.minCover{
+  height: 230px;
+  border-radius: 8px;
+}
+
+.minBookInfo{
+  height: 140px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.minBookInfo h4{
+  margin-block: 0;
+
+}
+
+.minBookInfo p{
+  margin-block: 0;
+  margin-right: 18px;
+}
+
+.minHead{
+  height: 46px;
 }
 
 .allBooksList p {
-        font-size: 14px;
-        margin-block: 8px;
+  font-size: 14px;
+  margin-block: 8px;
 }
 
 header {
@@ -102,17 +123,23 @@ header {
   z-index: 3;
 }
 
-.overviewCoverDiv{
+.overviewCoverDiv {
   width: 50%;
 }
 
-.overviewCoverShadow{
-
- 
+.overviewCoverShadow {
   display: inline-block;
   justify-content: center;
-    border-radius: 8px; 
-      box-shadow: 0 0 20px 10px rgba(111, 107, 107, 0.4); 
+  border-radius: 8px;
+  box-shadow: 0 0 20px 10px rgba(111, 107, 107, 0.4);
+}
+
+.popupCoverShadow {
+  display: inline-block;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 10px rgba(111, 107, 107, 0.4);
+  height: 200px;
 }
 
 .overviewCover {
@@ -176,14 +203,13 @@ footer button {
   border: 1px solid #7d7676;
 }
 
-.space{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .booksButton {
-
   display: inline-block;
 
   padding: 6px 20px;
@@ -197,9 +223,9 @@ footer button {
   border: 1px solid #5a916c;
 }
 
-.moreHead{
-    text-align: center;
-    width: calc((100vw/3)*2);
+.moreHead {
+  text-align: center;
+  width: calc((100vw / 3) * 2);
 }
 
 .moreBooksButton:hover {
@@ -251,7 +277,7 @@ footer button {
   margin-block: 35px;
 }
 
-.alignLeft{
+.alignLeft {
   text-align: left;
 }
 
@@ -271,12 +297,12 @@ footer button {
   width: 100vw;
   overflow-x: auto;
   height: fit-content;
- margin-inline: 16px;
- padding-bottom: 40px;
+  margin-inline: 16px;
+  padding-bottom: 40px;
 }
 
 .moreList {
-    height: 80%;
+  height: 80%;
 }
 
 #practice {
@@ -323,6 +349,7 @@ footer {
 
 .bookCover {
   width: 160px;
+  border-radius: 8px;
 }
 
 .none {
@@ -344,73 +371,67 @@ footer {
   display: flex;
   align-items: center;
 
-
-
   overflow: hidden;
   padding-bottom: 32px;
 }
 
-.overviewTitle{
+.overviewTitle {
   margin-bottom: 0;
   font-size: 1.5rem;
 }
 
 .overviewText {
   width: 50%;
- text-align: justify;
+  text-align: justify;
   padding-inline: 16px;
 
   z-index: 2;
-  
-  
 }
-
-
 
 .overviewText h3 {
   margin-bottom: 10px;
 }
 
-.overviewHead{
-    width: 100%;
-    margin-left: 25px;
+.overviewHead {
+  width: 100%;
+  margin-left: 25px;
 }
 
-.new{
+.new {
   font-size: 1.1875rem;
 }
 
-.overviewSubTitle{
+.overviewSubTitle {
   margin-top: 0;
   font-size: 1.25rem;
 }
 
-.pt15{
+.pt15 {
   font-size: 1.25rem;
 }
 
-.pt17{
+.pt17 {
   font-size: 1.4375rem;
 }
 
-.pt14{
+.pt14 {
   font-size: 1.1875rem;
 }
 
-.pt12{
+.pt12 {
   font-size: 1rem;
 }
 
-.pt13{
+.pt13 {
   font-size: 1.0625rem;
 }
 
-.imgGalery{
+.imgGalery {
   height: 250px;
   width: auto;
 }
 
-.musicDescription{
+.musicDescription {
   text-align: justify;
 }
 
@@ -440,7 +461,7 @@ footer {
   margin-inline: 16px;
 }
 
-.overviewText a {
+.buyButton {
   display: inline-block;
 
   padding: 14px 28px;
@@ -449,10 +470,9 @@ footer {
   color: white;
 
   text-decoration: none;
-
+  border: 2px solid #7d7676;
   border-radius: 10px;
   margin-bottom: 8px;
-  
 }
 
 .overviewText a:hover {
@@ -464,7 +484,7 @@ footer {
   justify-content: space-between;
 }
 
-.practiceTop{
+.practiceTop {
   justify-content: space-between;
 }
 
@@ -483,7 +503,6 @@ footer {
   text-align: center;
   width: 120px;
 }
-
 
 .routeButton:hover {
   background-color: #6e6868;
@@ -506,11 +525,14 @@ footer {
   -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
 }
 
+.pImgCont {
+  height: 600px;
+  width: 50%;
+}
 
 .profileImage {
-  width: 50%;
   height: 600px;
-
+  object-fit: cover;
   background-size: cover;
   background-position: center;
 
@@ -520,27 +542,24 @@ footer {
   -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
 
-
 .lyrikLink {
-    color: #487456;
-    text-decoration: underline;
+  color: #487456;
+  text-decoration: underline;
 }
-
-
 
 .profileInfo {
-    width: 50%;
+  width: 50%;
 }
 
-.aboutMenu{
-    margin-block: 8px;
-    background-color: #2b4834;
-    height: 35px;
-    justify-content: space-around;
-    align-items: center;
+.aboutMenu {
+  margin-block: 8px;
+  background-color: #2b4834;
+  height: 35px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.aboutMenu button{
+.aboutMenu button {
   width: 200px;
   height: 25px;
   border-radius: 10px;
@@ -549,189 +568,243 @@ footer {
   border: 1px solid #6a6464;
 }
 
-.aboutMenu button:hover{
-    background-color: #6e6868;
+.aboutMenu button:hover {
+  background-color: #6e6868;
 }
 
+#buyPopup{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.181);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.buyBackground {
+ position: fixed;
+ width: 650px;
+ height: 470px;
+ z-index: 5;
+ top: 20px;
+}
+
+.buyPopupContent{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-color: #efe9e2;
+  padding: 16px;
+  border: 2px solid #7d7676;
+  border-radius: 8px;
+}
+
+.popupHead{
+  margin-block: 10px;
+
+}
+
+.topLink{
+  margin-top: 25px;
+}
+
+.buyCover{
+  height: 200px;
+}
+
+.shopLinks{
+  gap: 8px;
+}
+
+.shopLinks a{
+      display: inline-block;
+    padding: 7px 28px;
+    background-color: #ffffff;
+    border: 2px solid #7d7676;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.shopLinks a:hover{
+   background-color: #c5c5c5;
+}
+
+.closeButton{
+  height: 40px;
+  width: 40px;
+  border: 2px solid #7d7676;
+  border-radius: 16px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.closeButton:hover{
+  background-color: #c5c5c5;
+}
+
+.shopLinkIco{
+  height: 20px;
+}
 
 .carousel {
+  position: relative;
 
-    position: relative;
+  width: 100%;
 
-    width: 100%;
+  max-width: 1200px;
 
-    max-width: 1200px;
+  height: 500px;
 
-    height: 500px;
+  margin: 0 auto;
 
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carouselViewport {
-
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carouselTrack {
+  display: flex;
+  align-items: center;
 
-    display: flex;
-    align-items: center;
+  gap: 20px;
 
-    gap: 20px;
-
-    transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .carouselSlide {
+  position: relative;
 
-    position: relative;
+  flex: 0 0 70%;
 
-    flex: 0 0 70%;
+  height: 500px;
 
-    height: 500px;
+  opacity: 0.35;
 
-    opacity: 0.35;
+  transform: scale(0.9);
 
-    transform: scale(0.9);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 
-    transition:
-        transform 0.4s ease,
-        opacity 0.4s ease;
+  overflow: hidden;
 
-    overflow: hidden;
-
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .slideBackground {
+  position: absolute;
 
-    position: absolute;
+  inset: 0;
 
-    inset: 0;
+  background-size: cover;
+  background-position: center;
 
-    background-size: cover;
-    background-position: center;
+  filter: blur(25px);
 
-    filter: blur(25px);
+  transform: scale(1.15);
 
-    transform: scale(1.15);
+  opacity: 0.5;
 
-    opacity: 0.5;
-
-    z-index: 1;
+  z-index: 1;
 }
 
 .carouselSlide.active {
+  opacity: 1;
 
-    opacity: 1;
-
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .carouselSlide img {
+  position: relative;
 
-    position: relative;
+  z-index: 2;
 
-    z-index: 2;
+  width: 100%;
+  height: 100%;
 
-    width: 100%;
-    height: 100%;
+  object-fit: contain;
 
-    object-fit: contain;
+  display: block;
 
-    display: block;
-
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* Rand zum Bildschirm */
 
 .carousel::before,
 .carousel::after {
+  content: "";
 
-    content: "";
+  position: absolute;
 
-    position: absolute;
+  top: 0;
 
-    top: 0;
+  width: 80px;
+  height: 100%;
 
-    width: 80px;
-    height: 100%;
+  z-index: 2;
 
-    z-index: 2;
-
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .carousel::before {
+  left: 0px;
 
-    left: 0px;
-
-    background:
-        linear-gradient(
-            to right,
-            white,
-            transparent
-        );
+  background: linear-gradient(to right, white, transparent);
 }
 
 .carousel::after {
+  right: 0;
 
-    right: 0;
-
-    background:
-        linear-gradient(
-            to left,
-            white,
-            transparent
-        );
+  background: linear-gradient(to left, white, transparent);
 }
 
 /* Pfeile */
 
 .carouselArrow {
+  position: absolute;
 
-    position: absolute;
+  z-index: 5;
 
-    z-index: 5;
+  width: 50px;
+  height: 50px;
 
-    width: 50px;
-    height: 50px;
+  border: none;
 
-    border: none;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  cursor: pointer;
 
-    cursor: pointer;
+  font-size: 1.5rem;
 
-    font-size: 1.5rem;
+  background: rgba(222, 222, 222, 0.34);
 
-    background:
-        rgba(222, 222, 222, 0.34);
+  backdrop-filter: blur(4px);
 
-    backdrop-filter: blur(4px);
-
-    transition: .2s;
+  transition: 0.2s;
 }
 
 .carouselArrow:hover {
-
-    background:
-        rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .carouselArrow.left {
-
-    left: 15px;
+  left: 15px;
 }
 
 .carouselArrow.right {
-
-    right: 15px;
+  right: 15px;
 }

@@ -7,21 +7,45 @@
       "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
       "image": "./IMG/buchCover.jpeg",
-      "link": "#"
+      "info": "",
+      "publisher": "München: Verlagshaus Schlosser",
+      "ISBN": "ISBN 3-758103-62-2",
+      "linkBuy": "",
+      "linkAmazon": "https://www.amazon.de/dp/3758103622/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=841788WH9W5L&dib=eyJ2IjoiMSJ9.6mCuoyYqYfkh7XE9FzrdcOyIK-4hY_fLmjH3X5t6NSpQ8Zf9D-cxlP3CM42RD4qBa6_0UAfASWf6irYDD4UUAviN3VLgp9xqXVGFunRD_NFGdI8Bf891TsD-v36ViMraKk4-xWXEB6S3elQ1L9GpsFfwg2Pfcf9UGap_YPHhO-_0Mf4Tnougt4Vt_1dQ6fs9.TSADCx_g_1FGVVXtehjsXvUaVKxGruUQ9qswr5Vmkq4&dib_tag=se&keywords=spurenelemente+der+kommunikation&qid=1781596451&sprefix=spurenelemente+der+kommunikation%2Caps%2C100&sr=8-1",
+      "linkThalia": "https://www.thalia.de/shop/home/artikeldetails/A1080254672",
+      "linkHugendubel": "https://www.hugendubel.de/de/taschenbuch/peter_gleixner-spurenelemente_der_kommunikation-53624508-produkt-details.html"
     },
 
     "moreBooks": [
       {
         "title": "Quadratur des Herzens",
-        "image": "./IMG/quadraturDesHerzens.jpeg"
+        "subTitle": "",
+        "publisher": "Amberg: Selbstverl.",
+        "image": "./IMG/quadraturDesHerzens.jpeg",
+        "info": "mit Bildern von Wilkin Spitta",
+        "ISBN": "",
+        "linkBuy": "Quadratur des Herzens",
+        "price":"15€",
+        "linkAmazon": "",
+        "linkThalia": "",
+        "linkHugendubel": ""
       },
       {
         "title": "Leben ist nicht Genug",
-        "image": "./IMG/lebenIstNichtGenug.jpeg"
+        "subTitle": "[Gedichte, Bilder, Musik]",
+        "publisher": "Amberg: Buch- & Kunst-Verl. Oberpfalz",
+        "image": "./IMG/lebenIstNichtGenug.jpeg",
+        "info": "mit Bildern von Günter Moser",
+        "ISBN": "ISBN 3-924350-98-1 ",
+        "linkBuy": "Leben ist nicht Genug",
+        "price":"15€",
+        "linkAmazon": "",
+        "linkThalia": "",
+        "linkHugendubel": ""
       }
     ],
 
-     "allBooks": [
+    "allBooks": [
       {
         "title": "Neues Testament, ",
         "info": "Amberg: Sudhang-Verl., 1991, 52 S., Illustr. (Vergriffen)"
@@ -65,34 +89,40 @@
   },
 
   "aboutInfo": {
-    "image":"./IMG/profileImg.png",
-    "pictures":[
+    "image": "./IMG/profileImg.png",
+    "pictures": [
       {
-        "IMG":"./IMG/IMG1.jpg",
-        "alternateText":""
+        "IMG": "./IMG/IMG1.jpg",
+        "alternateText": ""
       },
       {
-        "IMG":"./IMG/IMG2.jpeg",
-        "alternateText":""
+        "IMG": "./IMG/IMG2.jpeg",
+        "alternateText": ""
       },
       {
-        "IMG":"./IMG/IMG3.jpg",
-        "alternateText":""
+        "IMG": "./IMG/IMG3.jpg",
+        "alternateText": ""
       },
       {
-        "IMG":"./IMG/IMG5.jpg",
-        "alternateText":""
+        "IMG": "./IMG/IMG5.jpg",
+        "alternateText": ""
       }
     ]
   },
 
   "music": {
-    "list":[
-      {"text":"– seit 1985 als Keyboarder in verschiedenen musikalischen Formationen aktiv"},
-      {"text":"– wurde 1990 bei einem Wettbewerb des RSGI (Regensburger Schriftstellerverband International) unter die zehn besten Nachwuchsschriftsteller gewählt"},
-      {"text":"– gewann 1998 mit der Band „Voice“ das „Blue Note Festival“"},
-      {"text":"–zahlreiche Lyriklesungen mit Musik, mehrere CD-Veröffentlichungen"}
+    "list": [
+      {
+        "text": "– seit 1985 als Keyboarder in verschiedenen musikalischen Formationen aktiv"
+      },
+      {
+        "text": "– wurde 1990 bei einem Wettbewerb des RSGI (Regensburger Schriftstellerverband International) unter die zehn besten Nachwuchsschriftsteller gewählt"
+      },
+      { "text": "– gewann 1998 mit der Band „Voice“ das „Blue Note Festival“" },
+      {
+        "text": "–zahlreiche Lyriklesungen mit Musik, mehrere CD-Veröffentlichungen"
+      }
     ],
-    "description":"Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a> . Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt."
+    "description": "Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a> . Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt."
   }
 }

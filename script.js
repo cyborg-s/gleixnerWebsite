@@ -2,18 +2,20 @@ window.addEventListener("DOMContentLoaded", () => {
   loadData();
 });
 
+let websiteData;
+
 async function loadData() {
   try {
     const response = await fetch("./data.json");
 
-    const data = await response.json();
+    websiteData = await response.json();
 
-    loadOverview(data);
-    loadBooks(data);
-    loadPractice(data);
-    loadAbout(data);
-    loadImages(data);
-    loadMusic(data);
+    loadOverview(websiteData);
+    loadBooks(websiteData);
+    loadPractice(websiteData);
+    loadAbout(websiteData);
+    loadImages(websiteData);
+    loadMusic(websiteData);
   } catch (error) {
     console.error("Fehler beim Laden der JSON:", error);
   }
@@ -35,16 +37,127 @@ function loadOverview(data) {
         <p class="description">${data.books.current.description}</p>
        
 
-        <a href="${data.books.current.link}">
-          Jetzt bestellen
-        </a>
+
+        <button class="buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
       </div>
 
             
-<div class="overviewCoverDiv flex center"><div class="overviewCoverShadow"><img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente"> </div>
-
+<div class="overviewCoverDiv flex center">
+  <div class="overviewCoverShadow">
+    <img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente"> 
+    </div>
+  </div>
 
   `;
+}
+
+function loadBuyPopup(bookKey, index = null) {
+  const popup = document.getElementById("buyPopup");
+  let book;
+
+let buyButton = "";
+let amazonLink = "";
+let thaliaLink = "";
+let hugendubelLink = "";  
+
+  if (index !== null) {
+        book = websiteData.books[bookKey][index];
+    } else {
+        book = websiteData.books[bookKey];
+    }
+
+
+  if (book.linkBuy !== "") {
+    buyButton = `
+    <h2>Dieses Buch ist für ${book.price} direkt beim Autor per Email erhältlich.</h2>
+    <p class="flex center">Bitte Adressdaten in der Email angeben, Versand erfolgt auf Rechnung</p>
+    <button class="buyButton" onclick="orderBookMail('${book.linkBuy}', '${book.price}')">
+      Per E-Mail bestellen
+    </button>
+  `;
+  }
+
+  
+  if (book.linkAmazon !== "") {
+    amazonLink = `
+    <a
+      class="topLink"
+      href="${book.linkAmazon}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img class="shopLinkIco" src="./IMG/amazon.png" alt="Amazon">
+    </a>
+  `;
+  }
+
+  if (book.linkThalia !== "") {
+    thaliaLink = `
+    <a
+      href="${book.linkThalia}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img class="shopLinkIco" src="./IMG/thalia.png" alt="Thalia">
+    </a>
+  `;
+  }
+
+  if (book.linkHugendubel !== "") {
+    hugendubelLink = `
+    <a
+      href="${book.linkHugendubel}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img class="shopLinkIco" src="./IMG/Hugendubel.png" alt="Hugendubel">
+    </a>
+  `;
+  }
+
+  popup.innerHTML = `
+  <div class="buyBackground">
+        <div class="buyPopupContent flex">
+
+        <div class="popupCoverShadow">    
+          <img class="buyCover"
+                src="${book.image}"
+                alt="${book.title}"
+            >
+        </div>
+            <h2 class="popupHead headFont">${book.title}</h2>
+
+            <h3 class="popupHead headFont">${book.subTitle}</h3>
+
+            <div class="shopLinks flex column">
+
+                ${amazonLink}
+
+    ${thaliaLink}
+
+    ${hugendubelLink}
+
+    ${buyButton}
+
+    <button class="closeButton" onclick="closeBuyPopup()">
+      X
+    </button>
+
+            </div>
+
+        </div></div>
+
+    `;
+
+  openBuyPopup();
+}
+
+function openBuyPopup() {
+  document.getElementById("buyPopup").classList.remove("none");
+}
+
+function closeBuyPopup() {
+  document.getElementById("buyPopup").classList.add("none");
 }
 
 function loadBooks(data) {
@@ -59,16 +172,20 @@ function loadBooks(data) {
 
       <div class="flex column space listItem">
         <div class="flex column align">
-          <img
+          <div class="minCover flex align"><img
             class="bookCover"
             src="${data.books.current.image}"
             alt="buchcover"
-          />
-          <h4 style="height: 23px;">${data.books.current.title}</h4>
+          /></div>
+          <div class="minBookInfo">
+          <div class="minHead"><h4 style="height: 23px;">${data.books.current.title}</h4>
+          <h4 style="height: 23px;">${data.books.current.subTitle}</h4></div>
+          <p>${data.books.current.info}</p>
+                <p>${data.books.current.publisher}</p>
+                <p>${data.books.current.ISBN}</p>
+          </div>
         </div>
-        <a class="booksButton" href="${data.books.current.link}">
-          Jetzt bestellen
-        </a>
+        <button class="buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
       </div>
 
     </div>
@@ -86,19 +203,23 @@ function loadBooks(data) {
 
         ${data.books.moreBooks
           .map(
-            (book) => `
+            (book,index) =>
+              `
             <div class="flex column listItem space">
               <div class="flex column align">    
-                <img
+                <div class="minCover flex align"><img
                     class="bookCover"
                     src="${book.image}"
                     alt="buchcover"
-                />  
-                <h4>${book.title}</h4>
-              </div>
-              <a class="booksButton" href="${data.books.current.link}">
-                Jetzt bestellen
-              </a>
+                /></div>  
+                <div class="minBookInfo">
+                <div class="minHead"><h4>${book.title}</h4>
+                <h4>${book.subTitle}</h4></div>
+                <p>${book.info}</p>
+                <p>${book.publisher}</p>
+                <p>${book.ISBN}</p>
+              </div></div>
+              <button class="buyButton" onclick="loadBuyPopup('moreBooks', ${index})">Jetzt Bestellen</button>
             </div>
             `,
           )
@@ -143,19 +264,12 @@ function loadPractice(data) {
 function loadAbout(data) {
   const aboutContainer = document.getElementById("aMinfos");
 
-
-
   aboutContainer.innerHTML = `
     <div class="flex">
       
-
-      <div
-            class="profileImage"
-            style="
-                background-image:
-                url('${data.aboutInfo.image}');
-            "
-        ></div>
+      <div class="flex center pImgCont">
+      
+<img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto"></div>
       <div class="profileInfo">
         <div>
           <h2 class="pt17">Peter Gleixner</h2>
@@ -169,9 +283,23 @@ function loadAbout(data) {
         <p class="pt12">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</p>
       </div>
     </div>`;
+}
 
-    
+function orderBookMail(title) {
+  const subject = encodeURIComponent(
+    `${title}`,
+  );
 
+  const body = encodeURIComponent(
+    "Guten Tag Herr Gleixner,\n\n" +
+      `Bestellung des Buches ${title}\n\n` +
+      "Meine Adresse lautet:\n" +
+      "> Bitte Daten hier eingeben <\n\n" +
+      "Ich habe zur Kenntnis genommen, dass das Buch 15 € auf Rechnung kostet.\n\n" +
+      "Mit freundlichen Grüßen",
+  );
+
+  window.location.href = `mailto:nysascha1@gmail.com?subject=${subject}&body=${body}`;
 }
 
 function loadCarousel(data) {
@@ -263,13 +391,12 @@ function loadCarousel(data) {
   updateCarousel();
 }
 
-function loadImages(data){
-    const imageContainer = document.getElementById("image");
-    const pictures = data.aboutInfo.pictures;
+function loadImages(data) {
+  const imageContainer = document.getElementById("image");
+  const pictures = data.aboutInfo.pictures;
 
-  
-    pictures.forEach((picture) => {
-      imageContainer.innerHTML += `
+  pictures.forEach((picture) => {
+    imageContainer.innerHTML += `
 
 
         <img class="imgGalery"
@@ -279,11 +406,17 @@ function loadImages(data){
 
 
     `;
-  })
+  });
 }
 
 function activate(activeButton, activeSection) {
-  const buttons = ["bookButton", "practiceButton", "aboutMeButton", "imageButton", "musicButton"];
+  const buttons = [
+    "bookButton",
+    "practiceButton",
+    "aboutMeButton",
+    "imageButton",
+    "musicButton",
+  ];
 
   const sections = ["books", "practice", "aboutMe", "image", "music"];
 
@@ -300,11 +433,14 @@ function activate(activeButton, activeSection) {
   document.getElementById(activeSection).classList.remove("none");
 }
 
-
 function aboutActivate(aboutActivButton, aboutActivSection) {
   const buttons = ["work", "art", "lyrik", "img"];
-  const sections = ["workContainer", "artContainer", "allBooks", "aboutCarousel"];
-
+  const sections = [
+    "workContainer",
+    "artContainer",
+    "allBooks",
+    "aboutCarousel",
+  ];
 
   buttons.forEach((button) => {
     document.getElementById(button).classList.remove("activ");
@@ -319,19 +455,19 @@ function aboutActivate(aboutActivButton, aboutActivSection) {
   document.getElementById(aboutActivSection).classList.remove("none");
 }
 
-function loadMusic(data){
+function loadMusic(data) {
   const imageContainer = document.getElementById("music");
   const list = data.music.list;
 
-  imageContainer.innerHTML =`
+  imageContainer.innerHTML = `
   <h2 class="headFont pt14">Musik</h2>
   <div id="musicList"></div>
   <p class="pt12 musicDescription">${data.music.description}</p>
-  `
+  `;
 
-list.forEach((listItem) => {
+  list.forEach((listItem) => {
     musicList.innerHTML += `
     <p>${listItem.text}</p>
-`
-
-})};
+`;
+  });
+}
