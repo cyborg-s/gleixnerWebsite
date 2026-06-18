@@ -331,6 +331,10 @@ footer button {
   padding-top: 80px;
 }
 
+.practiceList{
+  max-width: 800px;
+}
+
 .left{
   width: 100vw;
 }

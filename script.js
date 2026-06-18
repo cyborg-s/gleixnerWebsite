@@ -44,7 +44,7 @@ function loadOverview(data) {
             
 <div class="overviewCoverDiv flex center">
   <div class="overviewCoverShadow">
-    <img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente"> 
+    <img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente" loading="lazy"> 
     </div>
   </div>
 
@@ -86,7 +86,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/amazon.png" alt="Amazon">
+      <img class="shopLinkIco" src="./IMG/amazon.png" alt="Amazon" loading="lazy">
     </a>
   `;
   }
@@ -98,7 +98,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/thalia.png" alt="Thalia">
+      <img class="shopLinkIco" src="./IMG/thalia.png" alt="Thalia" loading="lazy">
     </a>
   `;
   }
@@ -110,7 +110,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/hugendubel.png" alt="Hugendubel">
+      <img class="shopLinkIco" src="./IMG/hugendubel.png" alt="Hugendubel" loading="lazy">
     </a>
   `;
   }
@@ -123,6 +123,7 @@ let hugendubelLink = "";
           <img class="buyCover"
                 src="${book.image}"
                 alt="${book.title}"
+                loading="lazy"
             >
         </div>
             <h2 class="popupHead headFont">${book.title}</h2>
@@ -177,6 +178,7 @@ function loadBooks(data) {
             class="bookCover"
             src="${data.books.current.image}"
             alt="buchcover"
+            loading="lazy"
           /></div>
           <div class="minBookInfo">
           <div class="minHead"><h4 style="height: 23px;">${data.books.current.title}</h4>
@@ -212,6 +214,7 @@ function loadBooks(data) {
                     class="bookCover"
                     src="${book.image}"
                     alt="buchcover"
+                    loading="lazy"
                 /></div>  
                 <div class="minBookInfo">
                 <div class="minHead"><h4>${book.title}</h4>
@@ -283,12 +286,10 @@ function loadPractice(data) {
     </div>
     <div class="practice">
       <h3 class="headFont pt16">Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
-      <p class="pt14">
       <ul>
-      <li>von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg</li>
-      <li>zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</li>
+      <li class="practiceList">von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg</li>
+      <li class="practiceList">zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</li>
       <ul>
-      </p>
     </div>
   `;
 }
@@ -301,7 +302,7 @@ function loadAbout(data) {
       
       <div class="flex center pImgCont">
       <div class="overviewCoverShadow">      
-      <img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto"></div></div>
+      <img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto" loading="lazy"></div></div>
       <div class="profileInfo">
         <div>
           <h2 class="pt20">Peter Gleixner</h2>
@@ -367,6 +368,7 @@ function loadCarousel(data) {
         <img
             src="${picture.IMG}"
             alt="${picture.alternateText}"
+            loading="lazy"
         >
 
     </div>
@@ -438,6 +440,7 @@ function loadImages(data) {
         <img class="imgGalery"
             src="${picture.IMG}"
             alt="${picture.alternateText}"
+            loading="lazy"
         >
 
 
