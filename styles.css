@@ -470,6 +470,7 @@ footer {
 .imgGalery {
   height: 250px;
   width: auto;
+  border-radius: 4px;
 }
 
 .musicDescription {
