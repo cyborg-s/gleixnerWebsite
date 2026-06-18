@@ -86,7 +86,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/amazon.png" alt="Amazon" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/amazon.webp" alt="Amazon" loading="lazy">
     </a>
   `;
   }
@@ -98,7 +98,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/thalia.png" alt="Thalia" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/thalia.webp" alt="Thalia" loading="lazy">
     </a>
   `;
   }
@@ -110,7 +110,7 @@ let hugendubelLink = "";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/hugendubel.png" alt="Hugendubel" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/hugendubel.webp" alt="Hugendubel" loading="lazy">
     </a>
   `;
   }

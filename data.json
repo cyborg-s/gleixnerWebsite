@@ -6,7 +6,7 @@
       "descriptionIntro": "<b>Inmitten unserer zunehmend technisierten, digitalen Welt steht dieses Buch für eine Rückbesinnung auf das Wesentliche und ist zugleich eine Liebeserklärung an das Leben.</b>",
       "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
-      "image": "./IMG/buchCover.jpeg",
+      "image": "./IMG/buchCover.webp",
       "info": "",
       "publisher": "München: Verlagshaus Schlosser",
       "ISBN": "ISBN 3-758103-62-2",
@@ -21,7 +21,7 @@
         "title": "Quadratur des Herzens",
         "subTitle": "",
         "publisher": "Amberg: Selbstverl.",
-        "image": "./IMG/quadraturDesHerzens.jpeg",
+        "image": "./IMG/quadraturDesHerzens.webp",
         "info": "mit Bildern von Wilkin Spitta",
         "ISBN": "",
         "linkBuy": "Quadratur des Herzens",
@@ -34,7 +34,7 @@
         "title": "Leben ist nicht Genug",
         "subTitle": "[Gedichte, Bilder, Musik]",
         "publisher": "Amberg: Buch- & Kunst-Verl. Oberpfalz",
-        "image": "./IMG/lebenIstNichtGenug.jpeg",
+        "image": "./IMG/lebenIstNichtGenug.webp",
         "info": "mit Bildern von Günter Moser",
         "ISBN": "ISBN 3-924350-98-1 ",
         "linkBuy": "Leben ist nicht Genug",
@@ -85,26 +85,26 @@
     "head": "Peter Gleixner – Praxis für Sprachtherapie",
     "text": "Sprachtherapeut für Stimm-, Sprech- und Sprachstörungen<br>Heilpädagoge mit Schwerpunkt Sprachheilpädagogik<br>Therapeut für Sensorische Integration (nach Jean Ayres)<br>Psychologische Beratung und Unterstützung ",
     "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. 09621-33106<br>E-Mail: gleixnerpeter@web.de<br>",
-    "image": "./IMG/map.png"
+    "image": "./IMG/map.webp"
   },
 
   "aboutInfo": {
-    "image": "./IMG/profileImg.png",
+    "image": "./IMG/profileImg.webp",
     "pictures": [
       {
-        "IMG": "./IMG/IMG1.jpg",
+        "IMG": "./IMG/IMG1.webp",
         "alternateText": ""
       },
       {
-        "IMG": "./IMG/IMG2.jpeg",
+        "IMG": "./IMG/IMG2.webp",
         "alternateText": ""
       },
       {
-        "IMG": "./IMG/IMG3.jpg",
+        "IMG": "./IMG/IMG3.webp",
         "alternateText": ""
       },
       {
-        "IMG": "./IMG/IMG5.jpg",
+        "IMG": "./IMG/IMG5.webp",
         "alternateText": ""
       }
     ]
