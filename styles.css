@@ -44,7 +44,8 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  background-color: #beb2a21d;
+  background-color: #69689161;
+  
 }
 
 .align {
@@ -70,7 +71,7 @@ body {
 
 .aboutLink {
   text-decoration: none;
-  color: #78846f;
+  color: #8b7862;
   font-weight: bold;
 }
 
@@ -114,11 +115,15 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 118px;
-
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #827b7b;
   margin-bottom: -11px;
   z-index: 3;
 }
@@ -131,7 +136,7 @@ header {
   display: inline-block;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0 0 20px 10px rgba(111, 107, 107, 0.4);
+  box-shadow: 0 0 20px 10px rgba(58, 57, 57, 0.4);
 }
 
 .popupCoverShadow {
@@ -146,19 +151,21 @@ header {
   display: block;
   max-width: 100%;
   height: 500px;
+  border-radius: 8px;
 }
 
 .logo {
-  height: 60px;
-  margin-top: 16px;
+  height: 90px;
+  padding-left: 12px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   gap: 32px;
-  background-color: #9cac90;
-  height: 60px;
+  height: 100%;
+  align-items: center;
+  padding-right: 16px;
 }
 
 nav a {
@@ -275,6 +282,11 @@ footer button {
 #books {
   height: fit-content;
   margin-block: 35px;
+  padding-top: 60px;
+}
+
+#booksNotA{
+  max-width: 940px;
 }
 
 .alignLeft {
@@ -293,11 +305,15 @@ footer button {
   height: 100%;
 }
 
+.textCenter{
+  text-align: center;
+}
+
 .list {
   width: 100vw;
   overflow-x: auto;
   height: fit-content;
-  margin-inline: 16px;
+  margin-inline: 32px 16px;
   padding-bottom: 40px;
 }
 
@@ -305,33 +321,54 @@ footer button {
   height: 80%;
 }
 
+.sectionHeader{
+  padding-inline: 16px;
+}
+
 #practice {
   height: 100%;
-  margin-block: 22px;
-  padding-inline: 16px;
+  padding-inline: 64px;
+  padding-top: 80px;
+}
+
+.left{
+  width: 100vw;
+}
+
+.bookHead{
+  max-width: 1150px;
+  width: 100%;
+}
+
+#aMinfos{
+  width: 100%;
 }
 
 #aboutMe {
   height: 100%;
   margin-block: 22px;
-  padding-inline: 16px;
-  padding-bottom: 45px;
+  padding-top: 40px;
+  padding-top: 60px;
 }
 
 #music {
+  max-width: 940px;
   height: 100%;
   margin-block: 22px;
   padding-inline: 16px;
+  padding-top: 60px;
+  padding-block-end: 60px;
 }
 
 #image {
   height: 100%;
   margin-block: 38px;
-  padding-inline: 16px;
+  padding-bottom: -20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
+  padding-top: 100px;
 }
 
 footer {
@@ -367,12 +404,12 @@ footer {
 #overview {
   width: 100%;
   min-height: 500px;
-
+  margin-top: 80px;
   display: flex;
   align-items: center;
 
   overflow: hidden;
-  padding-bottom: 32px;
+  padding-bottom: 0px;
 }
 
 .overviewTitle {
@@ -406,25 +443,29 @@ footer {
   font-size: 1.25rem;
 }
 
-.pt15 {
-  font-size: 1.25rem;
+.pt20{
+  font-size: 1.69rem;
 }
 
-.pt17 {
-  font-size: 1.4375rem;
+.pt16 {
+  font-size: 1.31rem;
+}
+
+.pt18 {
+  font-size: 1.5rem;
 }
 
 .pt14 {
-  font-size: 1.1875rem;
+  font-size: 1.19rem;
 }
 
-.pt12 {
+/* .pt12 {
   font-size: 1rem;
 }
 
 .pt13 {
   font-size: 1.0625rem;
-}
+} */
 
 .imgGalery {
   height: 250px;
@@ -436,11 +477,11 @@ footer {
 }
 
 .descriptionIntro {
-  font-size: 1.0625rem;
+  font-size: 1.25rem;
 }
 
 .description {
-  font-size: 1rem;
+  
   margin-bottom: 16px !important;
 }
 
@@ -485,7 +526,7 @@ footer {
 }
 
 .practiceTop {
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .routeButton {
@@ -495,7 +536,6 @@ footer {
 
   background-color: #555050;
   color: white;
-
   text-decoration: none;
   margin-top: 16px;
   border-radius: 10px;
@@ -535,11 +575,12 @@ footer {
   object-fit: cover;
   background-size: cover;
   background-position: center;
+  border-radius: 8px;
 
   /* Bild blendet nach links aus */
-  mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  /* mask-image: linear-gradient(to right, black 90%, transparent 100%);
 
-  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%); */
 }
 
 .lyrikLink {
@@ -549,6 +590,7 @@ footer {
 
 .profileInfo {
   width: 50%;
+  margin-top: 60px;
 }
 
 .aboutMenu {

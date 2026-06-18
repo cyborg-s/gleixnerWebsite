@@ -27,7 +27,7 @@ function loadOverview(data) {
   overViewContainer.innerHTML = `
 
       <div class="overviewText flex column align">
-        <h2 class="headFont pt15">Peter Gleixner</h2>
+        <h1 class="headFont pt20">Peter Gleixner</h1>
         <h3 class="new">Neuvorstellung meines Buches</h3>
 
         <h2 class="headFont overviewHead overviewTitle alignLeft">${data.books.current.title}</h2>
@@ -38,7 +38,7 @@ function loadOverview(data) {
        
 
 
-        <button class="buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
+        <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
       </div>
 
             
@@ -71,7 +71,7 @@ let hugendubelLink = "";
     buyButton = `
     <h2>Dieses Buch ist für ${book.price} direkt beim Autor per Email erhältlich.</h2>
     <p class="flex center">Bitte Adressdaten in der Email angeben, Versand erfolgt auf Rechnung</p>
-    <button class="buyButton" onclick="orderBookMail('${book.linkBuy}', '${book.price}')">
+    <button class="pt14 buyButton" onclick="orderBookMail('${book.linkBuy}', '${book.price}')">
       Per E-Mail bestellen
     </button>
   `;
@@ -163,6 +163,7 @@ function closeBuyPopup() {
 function loadBooks(data) {
   const moreBooksContainer = document.getElementById("moreBooks");
   const newestBookContainer = document.getElementById("newestBook");
+  const notAContainer = document.getElementById("booksNotA");
 
   newestBookContainer.innerHTML = `
   <div class="flex column align">
@@ -185,7 +186,7 @@ function loadBooks(data) {
                 <p>${data.books.current.ISBN}</p>
           </div>
         </div>
-        <button class="buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
+        <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
       </div>
 
     </div>
@@ -216,10 +217,10 @@ function loadBooks(data) {
                 <div class="minHead"><h4>${book.title}</h4>
                 <h4>${book.subTitle}</h4></div>
                 <p>${book.info}</p>
-                <p>${book.publisher}</p>
+                <p class="textCenter">${book.publisher}</p>
                 <p>${book.ISBN}</p>
               </div></div>
-              <button class="buyButton" onclick="loadBuyPopup('moreBooks', ${index})">Jetzt Bestellen</button>
+              <button class="pt14 buyButton" onclick="loadBuyPopup('moreBooks', ${index})">Jetzt Bestellen</button>
             </div>
             `,
           )
@@ -229,6 +230,25 @@ function loadBooks(data) {
       </div>
     </div>
   `;
+
+
+  notAContainer.innerHTML = `
+  <h2 class="pt18 headFont sectionHeader">Vergriffene Bücher</h2>
+  <ul>
+  ${data.books.allBooks
+          .map(
+            (book,index) =>
+              `
+            <li class="pt14"><b class="pt16">${book.title}</b> ${book.info}</li>
+            `,
+          )
+          .join("")}
+  
+  
+  </ul>
+  `
+
+
 }
 
 function loadPractice(data) {
@@ -238,25 +258,37 @@ function loadPractice(data) {
     <div class="practiceTop flex">
     
       <div>
-        <h2 class="headFont pt14">${data.practice.head}</h2>
+        <h2 class="headFont pt18">${data.practice.head}</h2>
         <div class="flex column">
-        <div>${data.practice.text}</div>
-        <h3 class="headFont pt13">Universitäre und fachakademische Ausbildung in den Bereichen</h3>
-        <p class="pt12">– Sprecherziehung<br>– Stimmbildung<br>– Spieltherapie<br>– Elternarbeit<br>– Klientenzentrierte Gesprächsführung (nach Ruth Cohn)</p>
+        <div><p class="pt14">${data.practice.text}</p></div>
+        <div class="contact">
+      <h3 class="headFont pt16">Kontakt</h3>
+        <div><p class="pt14">${data.practice.contact}</p></div>
+        <a class="pt14 headFont routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7">Routenplaner</a>
+      </div>
+        <h3 class="headFont pt16">Universitäre und fachakademische Ausbildung in den Bereichen</h3>
+          <ul>
+          <li class="pt14">Sprecherziehung</li>
+          <li class="pt14">Stimmbildung</li>
+          <li class="pt14">Spieltherapie</li>
+          <li class="pt14">Elternarbeit</li>
+          <li class="pt14">Klientenzentrierte Gesprächsführung (nach Ruth Cohn)</li>
+          </ul>
         
         </div>
       </div>
-      <div class="contact">
-      <h3 class="headFont pt14">Kontakt</h3>
-        <div>${data.practice.contact}</div>
-        <a class="routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7">Routenplaner</a>
-      </div>
+      
 
         
     </div>
     <div class="practice">
-      <h3 class="headFont pt13">Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
-      <p class="pt12">– von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg<br>– zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</br>
+      <h3 class="headFont pt16">Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
+      <p class="pt14">
+      <ul>
+      <li>von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg</li>
+      <li>zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</li>
+      <ul>
+      </p>
     </div>
   `;
 }
@@ -268,38 +300,42 @@ function loadAbout(data) {
     <div class="flex">
       
       <div class="flex center pImgCont">
-      
-<img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto"></div>
+      <div class="overviewCoverShadow">      
+      <img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto"></div></div>
       <div class="profileInfo">
         <div>
-          <h2 class="pt17">Peter Gleixner</h2>
-          <p class="pt14">* 1967 in Amberg,</p>
+          <h2 class="pt20">Peter Gleixner</h2>
+          <p class="pt16">* 1967 in Amberg,</p>
         </div>
-        <p class="pt12">–  <a class="aboutLink" onclick="activate('practiceButton', 'practice')" href="#practice">Spachtherapeut</a> und staatlich geprüfter Heilpädagoge</p>
-        <p class="pt12">–  <a class="aboutLink" onclick="activate('bookButton', 'books')" href="#lyrik">Lyriker</a></p>
-        <p class="pt12">–  <a class="aboutLink" onclick="activate('musicButton', 'music')" href="#music">Musiker</a></p>
-        <p class="pt12">–  Freizeitbauer</p>
-        <p class="pt12">–  Naturliebhaber</p>
-        <p class="pt12">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</p>
-      </div>
+        <ul>
+        <li class="pt14">  <a class="aboutLink" onclick="activate('practiceButton', 'practice')" href="#practice">Spachtherapeut</a> und staatlich geprüfter Heilpädagoge</li>
+        <li class="pt14">  <a class="aboutLink" onclick="activate('bookButton', 'books')" href="#lyrik">Lyriker</a></li>
+        <li class="pt14">  <a class="aboutLink" onclick="activate('musicButton', 'music')" href="#music">Musiker</a></li>
+        <li class="pt14">  Freizeitbauer</li>
+        <li class="pt14">  Naturliebhaber</li>
+        <li class="pt14">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</li>
+      </ul></div>
     </div>`;
 }
 
-function orderBookMail(title) {
+function orderBookMail(title, price) {
   const subject = encodeURIComponent(
     `${title}`,
   );
 
   const body = encodeURIComponent(
-    "Guten Tag Herr Gleixner,\n\n" +
-      `Bestellung des Buches ${title}\n\n` +
-      "Meine Adresse lautet:\n" +
-      "> Bitte Daten hier eingeben <\n\n" +
-      "Ich habe zur Kenntnis genommen, dass das Buch 15 € auf Rechnung kostet.\n\n" +
+      "Guten Tag,\n\n" +
+      `hiermit möchte ich Ihr Buch "${title}" zum Preis von ${price} bestellen.\n\n` +
+      "Meine Lieferadresse lautet:\n" +
+      "Name:\n" +
+      "Straße / Hausnummer:\n" +
+      "PLZ / Ort:\n" +
+      "Land:\n\n"+
+      "Zahlweise: Rechung\n\n" +
       "Mit freundlichen Grüßen",
   );
 
-  window.location.href = `mailto:nysascha1@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:gleixnerpeter@web.de?subject=${subject}&body=${body}`;
 }
 
 function loadCarousel(data) {
@@ -460,14 +496,24 @@ function loadMusic(data) {
   const list = data.music.list;
 
   imageContainer.innerHTML = `
-  <h2 class="headFont pt14">Musik</h2>
-  <div id="musicList"></div>
-  <p class="pt12 musicDescription">${data.music.description}</p>
+  <h2 class="headFont pt20">Musik</h2>
+  <ul id="musicList"></ul>
+  <p class="pt14 musicDescription">${data.music.description}</p>
   `;
 
   list.forEach((listItem) => {
     musicList.innerHTML += `
-    <p>${listItem.text}</p>
+    <li>${listItem.text}</li>
 `;
   });
+}
+
+function contactEmail() {
+
+    const subject = encodeURIComponent(
+        "Kontaktanfrage"
+    );
+
+    window.location.href =
+        `mailto:gleixnerpeter@web.de?subject=${subject}`;
 }

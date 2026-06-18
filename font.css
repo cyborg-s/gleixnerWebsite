@@ -150,8 +150,13 @@
 body {
     /* Erst das System-Original, dann Ihr Server-Fallback, dann der Standard */
     font-family: "Garamond", "EB Garamond", serif;
+    font-size: 1.19rem;
 }
 
 .headFont {
     font-family: "Trebuchet MS", "Ubuntu", sans-serif;
+}
+
+p{
+  font-size: 1.19rem;
 }

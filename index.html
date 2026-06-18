@@ -18,13 +18,14 @@
           /></a>
         </div>
         <nav>
-          <!-- <a onclick="activate('aboutMeButton', 'aboutMe')" href="#info">Über mich</a>
-          <a onclick="activate('practiceButton', 'practice')" href="#info">Praxis</a>
-          <a onclick="activate('bookButton', 'books')" href="#info">Bücher</a>
-          <a onclick="activate('musicButton', 'music')" href="#info">Musik</a>
-          <a onclick="activate('imageButton', 'image')" href="#info">Fotogalerie</a> -->
+          <a href="#image">Fotogalerie</a>
+          <a href="#aboutMe">Über mich</a>
+          <a href="#practice">Praxis</a>
+          <a href="#books">Bücher</a>
+          <a href="#music">Musik</a>
+          
 
-          <div class="infoMenu flex">
+          <!-- <div class="infoMenu flex">
             <button
               id="aboutMeButton"
               onclick="activate('aboutMeButton', 'aboutMe')"
@@ -58,7 +59,7 @@
             >
               Fotogalerie
             </button>
-          </div>
+          </div> -->
         </nav>
       </header>
       <main>
@@ -85,19 +86,25 @@
               Über Mich
             </button>
           </div> -->
-          <div>
-            <div id="books" class="books">
-              <section id="overview" class="flex"></section>
-              <div class="list flex">
+          <div class="flex column align">
+            <section id="overview" class="flex"></section>
+            
+            <div class="" id="image"></div>
+            <div class="" id="aboutMe"></div>
+            <div id="aMinfos"></div>
+            <div class="left"><div class="" id="practice"></div></div>
+            <div id="books" class="books flex column align">
+              <h2 class="pt20 headFont sectionHeader bookHead" >Bücher</h2>
+              <div class="list flex center">
                 <div id="newestBook" class="flex"></div>
                 <div id="moreBooks" class="flex"></div>
               </div>
+              <div id="booksNotA"></div>
             </div>
-            <div class="none" id="practice"></div>
-            <div class="none" id="music"></div>
-            <div class="none" id="image"></div>
-            <div class="none" id="aboutMe">
-            <div id="aMinfos"></div>
+            <div class="" id="music"></div>
+            
+            
+            
 
           </div>
             </div>
@@ -107,7 +114,7 @@
       </main>
       <footer>
         <a href="./imprint.html">Impressum</a>
-        <button onclick="">Kontakt</button>
+        <button class="headFont" onclick="contactEmail()">Kontakt</button>
         <a href="./privacy.html">Datenschutz</a>
       </footer>
     </div>
