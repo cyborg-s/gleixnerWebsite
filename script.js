@@ -44,7 +44,7 @@ function loadOverview(data) {
             
 <div class="overviewCoverDiv flex center">
   <div class="overviewCoverShadow">
-    <img class="overviewCover" src="./IMG/buchCover.jpeg" alt="Buch Cover Spurenelemente" loading="lazy"> 
+    <img class="overviewCover" src="./IMG/buchCover.webp" alt="Buch Cover Spurenelemente" loading="lazy"> 
     </div>
   </div>
 
