@@ -500,7 +500,7 @@ function loadMusic(data) {
 
   </div>
   <section class="audio-preview">
-    <h3>Hörprobe</h3>
+    <h3>Hörprobe der Band "Voice"</h3>
 
     <audio controls preload="none">
         <source src="./audio/vogelgezwitcher.mp3" type="audio/mpeg">
@@ -509,7 +509,9 @@ function loadMusic(data) {
 
     <p>
         Hören Sie einen Auszug aus
-        <strong>"Vogelgezwitcher"</strong>.
+        <strong>"Soul Balade"</strong>.<br>
+        Komposition: Peter Gleixner<br>
+        Gesang: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister
     </p>
 </section>
 
@@ -533,7 +535,6 @@ function contactEmail() {
 
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadData();
 
   const burgerButton = document.getElementById("burgerButton");
   const nav = document.getElementById("mainNav");

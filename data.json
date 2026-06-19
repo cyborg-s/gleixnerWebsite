@@ -63,20 +63,8 @@
         "info": "Amberg: Sudhang-Verl., 1997, 29 S. (Vergriffen)"
       },
       {
-        "title": "Leben ist nicht genug ",
-        "info": "[Gedichte, Bilder, Musik], mit Bildern von Günter Moser, Amberg: Buch- & Kunst-Verl. Ober-pfalz, 2001, 95 S., Illustr. und CD. ISBN 3-924350-98-1 (und beim Autor erhältlich)"
-      },
-      {
-        "title": "Die Quadratur des Herzens, ",
-        "info": "mit Bildern von Wilkin Spitta, Amberg: Selbstverl., 2007, 85 S., zahlr. Illustr. (beim Autor erhältlich)"
-      },
-      {
         "title": "Der Mut zum Sein bedeutet die Eigentlichkeit. Meine Lebensgeschichte, ",
         "info": "Mausdorf: Selbstverl., 2023, 143 S. (Vergriffen)"
-      },
-      {
-        "title": "Spurenelemente der Kommunikation. Gedanken eines Sprachtherapeuten,",
-        "info": "München: Verlagshaus Schlosser, 2026, XX S. ISBN XXXXX"
       }
     ]
   },
@@ -107,12 +95,17 @@
         "IMG": "./IMG/IMG4.webp",
         "alternateText": ""
       },
+      
       {
-        "IMG": "./IMG/IMG5.webp",
+        "IMG": "./IMG/IMG6.webp",
         "alternateText": ""
       },
       {
-        "IMG": "./IMG/IMG6.webp",
+        "IMG": "./IMG/IMG7.webp",
+        "alternateText": ""
+      },
+      {
+        "IMG": "./IMG/IMG8.webp",
         "alternateText": ""
       }
     ]
