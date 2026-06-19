@@ -7,6 +7,10 @@ html {
   margin-bottom: 50px;
 }
 
+.minHead{
+  height: 23px;
+}
+
 .burgerButton {
   display: none;
 }
@@ -1103,5 +1107,14 @@ footer {
   .buyButton,
   .routeButton {
     text-align: center;
+  }
+
+  .moreHead{
+    width: auto;
+  }
+
+  .minHead{
+    text-align: center;
+    height: 90px;
   }
 }

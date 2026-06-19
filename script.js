@@ -174,8 +174,8 @@ function loadBooks(data) {
             loading="lazy"
           /></div>
           <div class="minBookInfo">
-          <div class="minHead"><h4 style="height: 23px;">${data.books.current.title}</h4>
-          <h4 style="height: 23px;">${data.books.current.subTitle}</h4></div>
+          <div class="minHead"><h4>${data.books.current.title}</h4>
+          <h4>${data.books.current.subTitle}</h4></div>
           <p>${data.books.current.info}</p>
                 <p>${data.books.current.publisher}</p>
                 <p>${data.books.current.ISBN}</p>
