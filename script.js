@@ -26,28 +26,23 @@ function loadOverview(data) {
 
   overViewContainer.innerHTML = `
 
-      <div class="overviewText flex column align">
         <h1 class="headFont pt20">Peter Gleixner</h1>
         <h3 class="new">Neuvorstellung meines Buches</h3>
-
-        <h2 class="headFont overviewHead overviewTitle alignLeft">${data.books.current.title}</h2>
-        <h3 class="headFont overviewHead overviewSubTitle alignLeft">${data.books.current.subTitle}</h3>
-
-        <p class="descriptionIntro">${data.books.current.descriptionIntro}</p>
-        <p class="description">${data.books.current.description}</p>
-       
-
-
-        <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
-      </div>
-
+        <div class="flex overviewDiv align">
+          <div class="overviewText flex column align">
+            <h2 class="headFont overviewHead overviewTitle alignLeft">${data.books.current.title}</h2>
+            <h3 class="headFont overviewHead overviewSubTitle alignLeft">${data.books.current.subTitle}</h3>
+            <p class="descriptionIntro">${data.books.current.descriptionIntro}</p>
+            <p class="description">${data.books.current.description}</p>
+            <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
+          </div>
             
-<div class="overviewCoverDiv flex center">
-  <div class="overviewCoverShadow">
-    <img class="overviewCover" src="./IMG/buchCover.webp" alt="Buch Cover Spurenelemente" loading="lazy"> 
-    </div>
-  </div>
-
+          <div class="overviewCoverDiv flex center">
+            <div class="overviewCoverShadow">
+              <img class="overviewCover" src="./IMG/buchCover.webp" alt="Buch Cover Spurenelemente" loading="lazy"> 
+            </div>
+          </div>
+      </div>
   `;
 }
 
@@ -55,17 +50,16 @@ function loadBuyPopup(bookKey, index = null) {
   const popup = document.getElementById("buyPopup");
   let book;
 
-let buyButton = "";
-let amazonLink = "";
-let thaliaLink = "";
-let hugendubelLink = "";  
+  let buyButton = "";
+  let amazonLink = "";
+  let thaliaLink = "";
+  let hugendubelLink = "";
 
   if (index !== null) {
-        book = websiteData.books[bookKey][index];
-    } else {
-        book = websiteData.books[bookKey];
-    }
-
+    book = websiteData.books[bookKey][index];
+  } else {
+    book = websiteData.books[bookKey];
+  }
 
   if (book.linkBuy !== "") {
     buyButton = `
@@ -77,7 +71,6 @@ let hugendubelLink = "";
   `;
   }
 
-  
   if (book.linkAmazon !== "") {
     amazonLink = `
     <a
@@ -116,7 +109,7 @@ let hugendubelLink = "";
   }
 
   popup.innerHTML = `
-  <div class="buyBackground">
+  <div onclick="event.stopPropagation()" class="buyBackground">
         <div class="buyPopupContent flex">
 
         <div class="popupCoverShadow">    
@@ -126,9 +119,9 @@ let hugendubelLink = "";
                 loading="lazy"
             >
         </div>
-            <h2 class="popupHead headFont">${book.title}</h2>
+            <h2 class="popupHead headFont mobileFSh2">${book.title}</h2>
 
-            <h3 class="popupHead headFont">${book.subTitle}</h3>
+            <h3 class="popupHead headFont mobileFSh3">${book.subTitle}</h3>
 
             <div class="shopLinks flex column">
 
@@ -206,7 +199,7 @@ function loadBooks(data) {
 
         ${data.books.moreBooks
           .map(
-            (book,index) =>
+            (book, index) =>
               `
             <div class="flex column listItem space">
               <div class="flex column align">    
@@ -234,24 +227,21 @@ function loadBooks(data) {
     </div>
   `;
 
-
   notAContainer.innerHTML = `
   <h2 class="pt18 headFont sectionHeader">Vergriffene Bücher</h2>
   <ul>
   ${data.books.allBooks
-          .map(
-            (book,index) =>
-              `
+    .map(
+      (book, index) =>
+        `
             <li class="pt14"><b class="pt16">${book.title}</b> ${book.info}</li>
             `,
-          )
-          .join("")}
+    )
+    .join("")}
   
   
   </ul>
-  `
-
-
+  `;
 }
 
 function loadPractice(data) {
@@ -267,7 +257,7 @@ function loadPractice(data) {
         <div class="contact">
       <h3 class="headFont pt16">Kontakt</h3>
         <div><p class="pt14">${data.practice.contact}</p></div>
-        <a class="pt14 headFont routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7">Routenplaner</a>
+        <a class="pt14 headFont routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7" target="_blank">Routenplaner</a>
       </div>
         <h3 class="headFont pt16">Universitäre und fachakademische Ausbildung in den Bereichen</h3>
           <ul>
@@ -298,7 +288,7 @@ function loadAbout(data) {
   const aboutContainer = document.getElementById("aMinfos");
 
   aboutContainer.innerHTML = `
-    <div class="flex">
+    <div class="flex aboutDiv">
       
       <div class="flex center pImgCont">
       <div class="overviewCoverShadow">      
@@ -320,18 +310,16 @@ function loadAbout(data) {
 }
 
 function orderBookMail(title, price) {
-  const subject = encodeURIComponent(
-    `${title}`,
-  );
+  const subject = encodeURIComponent(`${title}`);
 
   const body = encodeURIComponent(
-      "Guten Tag,\n\n" +
+    "Guten Tag,\n\n" +
       `hiermit möchte ich Ihr Buch "${title}" zum Preis von ${price} bestellen.\n\n` +
       "Meine Lieferadresse lautet:\n" +
       "Name:\n" +
       "Straße / Hausnummer:\n" +
       "PLZ / Ort:\n" +
-      "Land:\n\n"+
+      "Land:\n\n" +
       "Zahlweise: Rechung\n\n" +
       "Mit freundlichen Grüßen",
   );
@@ -500,8 +488,33 @@ function loadMusic(data) {
 
   imageContainer.innerHTML = `
   <h2 class="headFont pt20">Musik</h2>
-  <ul id="musicList"></ul>
-  <p class="pt14 musicDescription">${data.music.description}</p>
+  <div >
+    <div class="flex align musicTop">
+      <ul id="musicList"></ul>
+      <img class="imgMusic"
+            src="${data.music.img.img}"
+            alt="${data.music.img.alt}"
+            loading="lazy"
+        >
+
+
+  </div>
+  <section class="audio-preview">
+    <h3>Hörprobe</h3>
+
+    <audio controls preload="none">
+        <source src="./audio/vogelgezwitcher.mp3" type="audio/mpeg">
+        Ihr Browser unterstützt die Audiowiedergabe nicht.
+    </audio>
+
+    <p>
+        Hören Sie einen Auszug aus
+        <strong>"Vogelgezwitcher"</strong>.
+    </p>
+</section>
+
+  <p class="pt14 musicDescription">${data.music.description}</p></div>
+
   `;
 
   list.forEach((listItem) => {
@@ -512,11 +525,28 @@ function loadMusic(data) {
 }
 
 function contactEmail() {
+  const subject = encodeURIComponent("Kontaktanfrage");
 
-    const subject = encodeURIComponent(
-        "Kontaktanfrage"
-    );
-
-    window.location.href =
-        `mailto:gleixnerpeter@web.de?subject=${subject}`;
+  window.location.href = `mailto:gleixnerpeter@web.de?subject=${subject}`;
 }
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadData();
+
+  const burgerButton = document.getElementById("burgerButton");
+  const nav = document.getElementById("mainNav");
+
+  burgerButton.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+});
+
+
+
+document.querySelectorAll("#mainNav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.getElementById("mainNav").classList.remove("open");
+  });
+});

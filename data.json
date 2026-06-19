@@ -104,7 +104,15 @@
         "alternateText": ""
       },
       {
+        "IMG": "./IMG/IMG4.webp",
+        "alternateText": ""
+      },
+      {
         "IMG": "./IMG/IMG5.webp",
+        "alternateText": ""
+      },
+      {
+        "IMG": "./IMG/IMG6.webp",
         "alternateText": ""
       }
     ]
@@ -123,6 +131,10 @@
         "text": "zahlreiche Lyriklesungen mit Musik, mehrere CD-Veröffentlichungen"
       }
     ],
-    "description": "Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink pt16' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a>. Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt."
+    "description": "Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink pt16' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a>. Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt.",
+    "img":{
+      "img":"./IMG/imgMusic.webp",
+      "alt":""
+    }
   }
 }

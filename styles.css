@@ -7,31 +7,27 @@ html {
   margin-bottom: 50px;
 }
 
+.burgerButton {
+  display: none;
+}
+
 .backButton {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 10px 18px;
-
   border: none;
   border-radius: 999px;
-
   background: #e9e9e9;
-
   color: #333;
-
   font-size: 1rem;
   font-weight: 500;
-
   cursor: pointer;
-
   transition: all 0.2s ease;
 }
 
 .backButton:hover {
   background: #dcdcdc;
-
   transform: translateX(-2px);
 }
 
@@ -45,7 +41,6 @@ body {
   justify-content: center;
   overflow-x: hidden;
   background-color: #69689161;
-  
 }
 
 .align {
@@ -83,29 +78,28 @@ body {
   gap: 4px;
 }
 
-.minCover{
+.minCover {
   height: 230px;
   border-radius: 8px;
 }
 
-.minBookInfo{
+.minBookInfo {
   height: 140px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.minBookInfo h4{
+.minBookInfo h4 {
   margin-block: 0;
-
 }
 
-.minBookInfo p{
+.minBookInfo p {
   margin-block: 0;
   margin-right: 18px;
 }
 
-.minHead{
+.minHead {
   height: 46px;
 }
 
@@ -128,7 +122,14 @@ header {
   z-index: 3;
 }
 
+.maxWitdh {
+  width: 100%;
+  max-width: 1440px;
+  justify-content: space-between;
+}
+
 .overviewCoverDiv {
+  height: fit-content;
   width: 50%;
 }
 
@@ -198,14 +199,10 @@ footer button:hover {
 
 footer button {
   display: inline-block;
-
   padding: 6px 20px;
-
   background: #555050;
   color: white;
-
   text-decoration: none;
-
   border-radius: 5px;
   border: 1px solid #7d7676;
 }
@@ -218,14 +215,10 @@ footer button {
 
 .booksButton {
   display: inline-block;
-
   padding: 6px 20px;
-
   background: #555050;
   color: white;
-
   text-decoration: none;
-
   border-radius: 5px;
   border: 1px solid #5a916c;
 }
@@ -233,6 +226,7 @@ footer button {
 .moreHead {
   text-align: center;
   width: calc((100vw / 3) * 2);
+  max-width: calc((1440px / 3) * 2);
 }
 
 .moreBooksButton:hover {
@@ -245,6 +239,11 @@ footer button {
 
 .profileImg {
   width: 35%;
+}
+
+.imgMusic {
+  height: 300px;
+  margin-left: 32px;
 }
 
 #info {
@@ -283,10 +282,16 @@ footer button {
   height: fit-content;
   margin-block: 35px;
   padding-top: 60px;
+  width: 100%;
 }
 
-#booksNotA{
+#booksNotA {
   max-width: 940px;
+}
+
+.bookHeaderDiv{
+  width: 100%;
+  margin-left: 100px;
 }
 
 .alignLeft {
@@ -305,7 +310,7 @@ footer button {
   height: 100%;
 }
 
-.textCenter{
+.textCenter {
   text-align: center;
 }
 
@@ -321,7 +326,7 @@ footer button {
   height: 80%;
 }
 
-.sectionHeader{
+.sectionHeader {
   padding-inline: 16px;
 }
 
@@ -331,20 +336,20 @@ footer button {
   padding-top: 80px;
 }
 
-.practiceList{
+.practiceList {
   max-width: 800px;
 }
 
-.left{
+.left {
   width: 100vw;
+  max-width: 1440px;
 }
 
-.bookHead{
+.bookHead {
   max-width: 1150px;
-  width: 100%;
 }
 
-#aMinfos{
+#aMinfos {
   width: 100%;
 }
 
@@ -411,7 +416,6 @@ footer {
   margin-top: 80px;
   display: flex;
   align-items: center;
-
   overflow: hidden;
   padding-bottom: 0px;
 }
@@ -425,7 +429,6 @@ footer {
   width: 50%;
   text-align: justify;
   padding-inline: 16px;
-
   z-index: 2;
 }
 
@@ -447,7 +450,7 @@ footer {
   font-size: 1.25rem;
 }
 
-.pt20{
+.pt20 {
   font-size: 1.69rem;
 }
 
@@ -462,14 +465,6 @@ footer {
 .pt14 {
   font-size: 1.19rem;
 }
-
-/* .pt12 {
-  font-size: 1rem;
-}
-
-.pt13 {
-  font-size: 1.0625rem;
-} */
 
 .imgGalery {
   height: 250px;
@@ -486,7 +481,6 @@ footer {
 }
 
 .description {
-  
   margin-bottom: 16px !important;
 }
 
@@ -494,27 +488,17 @@ footer {
   font-size: 12px;
 }
 
-/* .overviewText h2 {
-  font-size: 28px;
-  margin-block: 0;
-  margin-bottom: 16px;
-} */
-
 .overviewText p {
   line-height: 1.7;
-
   margin: 0px;
   margin-inline: 16px;
 }
 
 .buyButton {
   display: inline-block;
-
   padding: 14px 28px;
-
   background-color: #555050;
   color: white;
-
   text-decoration: none;
   border: 2px solid #7d7676;
   border-radius: 10px;
@@ -536,9 +520,7 @@ footer {
 
 .routeButton {
   display: inline-block;
-
   padding: 14px 28px;
-
   background-color: #555050;
   color: white;
   text-decoration: none;
@@ -560,13 +542,9 @@ footer {
 .overviewImage {
   width: 45%;
   height: 500px;
-
   background-size: cover;
   background-position: center;
-
-  /* Bild blendet nach links aus */
   mask-image: linear-gradient(to left, black 65%, transparent 100%);
-
   -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
 }
 
@@ -581,11 +559,6 @@ footer {
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-
-  /* Bild blendet nach links aus */
-  /* mask-image: linear-gradient(to right, black 90%, transparent 100%);
-
-  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%); */
 }
 
 .lyrikLink {
@@ -619,7 +592,7 @@ footer {
   background-color: #6e6868;
 }
 
-#buyPopup{
+#buyPopup {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -629,18 +602,18 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-   z-index: 5;
+  z-index: 5;
 }
 
 .buyBackground {
- position: fixed;
- width: 650px;
- height: 470px;
- z-index: 5;
- top: 20px;
+  position: fixed;
+  width: 650px;
+  height: 540px;
+  z-index: 5;
+  top: 65px;
 }
 
-.buyPopupContent{
+.buyPopupContent {
   height: 100%;
   width: 100%;
   align-items: center;
@@ -651,40 +624,39 @@ footer {
   border-radius: 8px;
 }
 
-.popupHead{
+.popupHead {
   margin-block: 10px;
-
 }
 
-.topLink{
+.topLink {
   margin-top: 25px;
 }
 
-.buyCover{
+.buyCover {
   height: 200px;
 }
 
-.shopLinks{
+.shopLinks {
   gap: 8px;
 }
 
-.shopLinks a{
-      display: inline-block;
-    padding: 7px 28px;
-    background-color: #ffffff;
-    border: 2px solid #7d7676;
-    color: black;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-bottom: 4px;
-    text-align: center;
+.shopLinks a {
+  display: inline-block;
+  padding: 7px 28px;
+  background-color: #ffffff;
+  border: 2px solid #7d7676;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  text-align: center;
 }
 
-.shopLinks a:hover{
-   background-color: #c5c5c5;
+.shopLinks a:hover {
+  background-color: #c5c5c5;
 }
 
-.closeButton{
+.closeButton {
   height: 40px;
   width: 40px;
   border: 2px solid #7d7676;
@@ -694,25 +666,20 @@ footer {
   right: 16px;
 }
 
-.closeButton:hover{
+.closeButton:hover {
   background-color: #c5c5c5;
 }
 
-.shopLinkIco{
+.shopLinkIco {
   height: 20px;
 }
 
 .carousel {
   position: relative;
-
   width: 100%;
-
   max-width: 1200px;
-
   height: 500px;
-
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -726,122 +693,84 @@ footer {
 .carouselTrack {
   display: flex;
   align-items: center;
-
   gap: 20px;
-
   transition: transform 0.4s ease;
 }
 
 .carouselSlide {
   position: relative;
-
   flex: 0 0 70%;
-
   height: 500px;
-
   opacity: 0.35;
-
   transform: scale(0.9);
-
   transition:
     transform 0.4s ease,
     opacity 0.4s ease;
-
   overflow: hidden;
-
   border-radius: 20px;
 }
 
 .slideBackground {
   position: absolute;
-
   inset: 0;
-
   background-size: cover;
   background-position: center;
-
   filter: blur(25px);
-
   transform: scale(1.15);
-
   opacity: 0.5;
-
   z-index: 1;
 }
 
 .carouselSlide.active {
   opacity: 1;
-
   transform: scale(1);
 }
 
 .carouselSlide img {
   position: relative;
-
   z-index: 2;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-
   display: block;
-
   margin: 0 auto;
 }
 
-/* Rand zum Bildschirm */
 
 .carousel::before,
 .carousel::after {
   content: "";
-
   position: absolute;
-
   top: 0;
-
   width: 80px;
   height: 100%;
-
   z-index: 2;
-
   pointer-events: none;
 }
 
 .carousel::before {
   left: 0px;
-
   background: linear-gradient(to right, white, transparent);
 }
 
 .carousel::after {
   right: 0;
-
   background: linear-gradient(to left, white, transparent);
 }
 
-/* Pfeile */
+
 
 .carouselArrow {
   position: absolute;
-
   z-index: 5;
-
   width: 50px;
   height: 50px;
-
   border: none;
-
   border-radius: 50%;
-
   cursor: pointer;
-
   font-size: 1.5rem;
-
   background: rgba(222, 222, 222, 0.34);
-
   backdrop-filter: blur(4px);
-
   transition: 0.2s;
 }
 
@@ -855,4 +784,324 @@ footer {
 
 .carouselArrow.right {
   right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.audio-preview {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+}
+
+.audio-preview h3 {
+    margin-block: 0 1rem;
+    color: #385640;
+}
+
+.audio-preview audio {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 970px) {
+
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .overviewImage {
+    display: none;
+  }
+
+  #overview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .overviewDiv{
+    flex-direction: column-reverse;
+  }
+
+  .overviewText {
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .overviewCoverDiv {
+    height: fit-content;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .profileImage {
+    height: 450px;
+  }
+
+  .aboutDiv{
+    padding-block: 16px;
+  }
+
+  .pImgCont {
+    width: 100%;
+    height: 450px;
+  }
+
+  .moreList{
+
+    align-items: center;
+  }
+
+  .profileInfo {
+    width: 100%;
+    margin-top: 20px;
+    padding-inline: 20px;
+  }
+
+  .list {
+    margin-inline: 16px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .carousel {
+    height: 400px;
+  }
+
+  .carouselSlide {
+    flex: 0 0 80%;
+  }
+
+  .imgMusic {
+    height: 220px;
+  }
+
+  .listItem{
+    width: auto;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .moreList{
+        flex-direction: column;
+  }
+
+  #aMinfos{
+        margin-left: 16px;
+  }
+
+  .musicTop{
+        flex-direction: column;
+  }
+
+  .imgMusic{
+    width: 80%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .buyBackground{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 610px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    position: fixed;
+    flex-direction: column;
+
+  }
+
+  .burgerButton {
+    display: block;
+    font-size: 28px;
+    border: none;
+    background: transparent;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .maxWitdh {
+    align-items: center;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #827b7b;
+    flex-direction: column;
+    padding: 16px;
+    z-index: 10;
+  }
+
+  nav.open {
+    display: grid;
+    height: auto;
+
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+  #overview {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+
+  .mobileFSh2{
+    font-size: 1.17rem;
+  }
+
+  .mobileFSh3{
+    font-size: 1.08rem;
+  }
+
+  .overviewText {
+    width: 100%;
+    padding-inline: 12px;
+  }
+
+  .overviewCover {
+    height: 300px;
+  }
+
+  .overviewCoverDiv {
+    width: 100%;
+  }
+
+  /* INFO MENU (falls später genutzt) */
+  .infoMenu {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .aboutDiv{
+    flex-direction: column;
+  }
+
+  .aMinfo{
+        padding-right: 32px;
+  }
+
+  .bookHeaderDiv{
+    margin-left: 0;
+  }
+
+  .infoMenu button {
+    width: 45%;
+    font-size: 14px;
+  }
+
+  /* BÜCHER */
+  .list {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+  }
+
+  .listItem {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .bookCover {
+    width: 140px;
+  }
+
+  /* PRAKTIKUM / TEXTBEREICHE */
+  #practice {
+    padding-inline: 16px;
+  }
+
+  .practice {
+    flex-direction: column;
+  }
+
+
+
+  .profileInfo {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  /* MUSIC */
+  #music {
+    padding-inline: 12px;
+  }
+
+  .imgMusic {
+    margin-left: 0;
+  }
+
+  /* CAROUSEL */
+  .carousel {
+    height: 280px;
+  }
+
+  .carouselSlide {
+    flex: 0 0 90%;
+    height: 280px;
+  }
+
+  .carouselArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  /* BUTTONS */
+  .buyButton,
+  .routeButton {
+    text-align: center;
+  }
 }

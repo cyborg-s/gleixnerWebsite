@@ -11,13 +11,17 @@
   </head>
   <body>
     <div class="page">
-      <header>
+      <header class="flex center">
+        <div class="maxWitdh flex align">
         <div>
           <a href="./index.html"
             ><img class="logo" src="./IMG/logo.webp" alt="Peter Gleixner Logo"
           /></a>
         </div>
-        <nav>
+        <button id="burgerButton" class="burgerButton">
+  ☰
+</button>
+        <nav id="mainNav">
           <a href="#image">Fotogalerie</a>
           <a href="#aboutMe">Über mich</a>
           <a href="#practice">Praxis</a>
@@ -25,76 +29,22 @@
           <a href="#music">Musik</a>
           
 
-          <!-- <div class="infoMenu flex">
-            <button
-              id="aboutMeButton"
-              onclick="activate('aboutMeButton', 'aboutMe')"
-            >
-              Über Mich
-            </button>
-            <button
-              id="practiceButton"
-              onclick="activate('practiceButton', 'practice')"
-            >
-              Praxis
-            </button>
-            <button
-              id="bookButton"
-              onclick="activate('bookButton', 'books')"
-              class="activ"
-            >
-              Bücher
-            </button>          
-            <button
-              id="musicButton"
-              onclick="activate('musicButton', 'music')"
-              class=""
-            >
-              Musik
-            </button>
-            <button
-              id="imageButton"
-              onclick="activate('imageButton', 'image')"
-              class=""
-            >
-              Fotogalerie
-            </button>
-          </div> -->
-        </nav>
+         
+        </nav></div>
       </header>
       <main>
         
         <section id="info">
-          <!-- <div class="infoMenu flex">
-            <button
-              id="bookButton"
-              onclick="activate('bookButton', 'books')"
-              class="activ"
-            >
-              Bücher
-            </button>
-            <button
-              id="practiceButton"
-              onclick="activate('practiceButton', 'practice')"
-            >
-              Praxis
-            </button>
-            <button
-              id="aboutMeButton"
-              onclick="activate('aboutMeButton', 'aboutMe')"
-            >
-              Über Mich
-            </button>
-          </div> -->
+
           <div class="flex column align">
-            <section id="overview" class="flex"></section>
+            <section id="overview" class="flex column"></section>
             
             <div class="" id="image"></div>
             <div class="" id="aboutMe"></div>
             <div id="aMinfos"></div>
             <div class="left"><div class="" id="practice"></div></div>
             <div id="books" class="books flex column align">
-              <h2 class="pt20 headFont sectionHeader bookHead" >Bücher</h2>
+              <div class="flex bookHeaderDiv"><h2 class="pt20 headFont sectionHeader bookHead" >Bücher</h2></div>
               <div class="list flex center">
                 <div id="newestBook" class="flex"></div>
                 <div id="moreBooks" class="flex"></div>
@@ -110,7 +60,7 @@
             </div>
           </div>
         </section>
-        <div id="buyPopup" class="none flex"></div>
+        <div id="buyPopup" onclick="closeBuyPopup()" class="none flex"></div>
       </main>
       <footer>
         <a href="./imprint.html">Impressum</a>
