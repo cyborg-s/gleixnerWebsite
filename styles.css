@@ -60,7 +60,6 @@ body {
 
 .page {
   max-width: 1440px;
-  width: 100%;
   min-height: 100vh;
 }
 
@@ -127,6 +126,7 @@ header {
   background-color: #827b7b;
   margin-bottom: -11px;
   z-index: 3;
+  box-sizing: border-box;
 }
 
 .maxWitdh {
