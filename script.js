@@ -161,7 +161,7 @@ function loadBooks(data) {
 
   newestBookContainer.innerHTML = `
   <div class="flex column align">
-    <h4>Aktuell</h4>
+    <h3 style="font-size: 1.5rem;" class="headFont">Aktuell</h3>
 
     <div class="flex moreList">
 
@@ -191,7 +191,7 @@ function loadBooks(data) {
 
   moreBooksContainer.innerHTML = `
     <div>
-      <h4 class="moreHead">Weitere verfügbare Bücher</h4>
+      <h3 style="font-size: 1.5rem;" class="headFont moreHead">Weitere verfügbare Bücher</h3>
 
 
       <div class="flex moreList">  
@@ -253,14 +253,12 @@ function loadPractice(data) {
       <div>
         <h2 class="headFont pt18">${data.practice.head}</h2>
         <div class="flex column">
-        <div><p class="pt14">${data.practice.text}</p></div>
+        <div><ul style="margin-top: 0;" class="pt14">${data.practice.text}</ul></div>
         <div class="contact">
-      <h3 class="headFont pt16">Kontakt</h3>
-        <div><p class="pt14">${data.practice.contact}</p></div>
-        <a class="pt14 headFont routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7" target="_blank">Routenplaner</a>
+      
       </div>
         <h3 class="headFont pt16">Universitäre und fachakademische Ausbildung in den Bereichen</h3>
-          <ul>
+          <ul style="margin-top: 0;">
           <li class="pt14">Sprecherziehung</li>
           <li class="pt14">Stimmbildung</li>
           <li class="pt14">Spieltherapie</li>
@@ -269,18 +267,23 @@ function loadPractice(data) {
           </ul>
         
         </div>
+
+        
       </div>
       
 
         
     </div>
     <div class="practice">
-      <h3 class="headFont pt16">Selbständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
+      <h3 class="headFont pt16">Selbstständiger Therapeut für Sprachtherapie und Heilpädagogik mit eigener Praxis</h3>
       <ul>
       <li class="practiceList">von 1996 bis 2013 außerdem klinischer Sprachtherapeut an der Stroke-Unit (Schlaganfall-Notstation) im Klinikum St. Marien, Amberg</li>
       <li class="practiceList">zusätzlich Dozent für Stimme, Sprache, Kommunikation, u. a. an der Bayerischen Verwaltungsschule, München</li>
       <ul>
     </div>
+    <h3 class="headFont pt16">Kontakt</h3>
+        <div><p class="pt14">${data.practice.contact}</p></div>
+        <a class="pt14 headFont routeButton" href="https://maps.app.goo.gl/KJV2opGAqTigYjUZ7" target="_blank">Routenplaner</a>
   `;
 }
 
@@ -421,8 +424,13 @@ function loadImages(data) {
   const imageContainer = document.getElementById("image");
   const pictures = data.aboutInfo.pictures;
 
-  pictures.forEach((picture) => {
+
     imageContainer.innerHTML += `
+  <div class="image" id="images"></div>
+  <a class="pt16 aboutLink" href="http://fotografie-sommer.de" target='_blank'>Fotografie Michael Sommer</a>`;
+
+  pictures.forEach((picture) => {
+    images.innerHTML += `
 
 
         <img class="imgGalery"
@@ -508,10 +516,10 @@ function loadMusic(data) {
     </audio>
 
     <p>
-        Hören Sie einen Auszug aus
-        <strong>"Soul Balade"</strong>.<br>
+        Hören Sie den Song <strong>"Soul - Balade"</strong>.<br>
         Komposition: Peter Gleixner<br>
-        Gesang: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister
+        Gesang: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister, Carola Brehms<br>
+        Klavier: Peter Gleixner
     </p>
 </section>
 

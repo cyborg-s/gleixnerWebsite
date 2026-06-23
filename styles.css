@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  width: 100vw;
 }
 
 .imprint {
@@ -28,6 +29,7 @@ html {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: 60px;
 }
 
 .backButton:hover {
@@ -45,6 +47,7 @@ body {
   justify-content: center;
   overflow-x: hidden;
   background-color: #69689161;
+  width: 100vw;
 }
 
 .align {
@@ -342,6 +345,7 @@ footer button {
 
 .practiceList {
   max-width: 800px;
+  padding-bottom: 16px;
 }
 
 .left {
@@ -354,6 +358,7 @@ footer button {
 }
 
 #aMinfos {
+  margin-top: 60px;
   width: 100%;
 }
 
@@ -373,7 +378,7 @@ footer button {
   padding-block-end: 60px;
 }
 
-#image {
+.image {
   height: 100%;
   margin-block: 38px;
   padding-bottom: -20px;
@@ -381,7 +386,7 @@ footer button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 footer {
@@ -514,7 +519,7 @@ footer {
 }
 
 .practice {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   justify-content: space-between;
 }
 
@@ -803,7 +808,7 @@ footer {
 
 
 .audio-preview {
-    padding: 0rem 1.5rem 0rem 1.5rem;
+    padding: 0rem 1.5rem 1rem 1.5rem;
     border-radius: 16px;
     backdrop-filter: blur(5px);
 }
@@ -915,6 +920,14 @@ footer {
 @media (max-width: 750px) {
   .moreList{
         flex-direction: column;
+  }
+
+  .shopLinks {
+    width: 80%;
+  }
+
+  .buyBackground{
+    height: 580px;
   }
 
   #aMinfos{
