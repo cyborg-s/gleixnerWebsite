@@ -229,7 +229,7 @@ function loadBooks(data) {
 
   notAContainer.innerHTML = `
   <h2 class="pt18 headFont sectionHeader">Vergriffene Bücher</h2>
-  <ul>
+  <ul class="profileInfoUl">
   ${data.books.allBooks
     .map(
       (book, index) =>
@@ -297,11 +297,11 @@ function loadAbout(data) {
       <div class="overviewCoverShadow">      
       <img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto" loading="lazy"></div></div>
       <div class="profileInfo">
-        <div>
+        <div class="profileInfoDiv">
           <h2 class="pt20">Peter Gleixner</h2>
           <p class="pt16">* 1967 in Amberg,</p>
         </div>
-        <ul>
+        <ul class="profileInfoUl">
         <li class="pt14">  <a class="aboutLink" onclick="activate('practiceButton', 'practice')" href="#practice">Spachtherapeut</a> und staatlich geprüfter Heilpädagoge</li>
         <li class="pt14">  <a class="aboutLink" onclick="activate('bookButton', 'books')" href="#lyrik">Lyriker</a></li>
         <li class="pt14">  <a class="aboutLink" onclick="activate('musicButton', 'music')" href="#music">Musiker</a></li>
@@ -498,7 +498,7 @@ function loadMusic(data) {
   <h2 class="headFont pt20">Musik</h2>
   <div >
     <div class="flex align musicTop">
-      <ul id="musicList"></ul>
+      <ul id="musicList" class="profileInfoUl"></ul>
       <img class="imgMusic"
             src="${data.music.img.img}"
             alt="${data.music.img.alt}"
@@ -511,7 +511,7 @@ function loadMusic(data) {
     <h3>Hörprobe der Band "Voice"</h3>
 
     <audio controls preload="none">
-        <source src="./audio/vogelgezwitcher.mp3" type="audio/mpeg">
+        <source src="./audio/Voice-Reality.mp3" type="audio/mpeg">
         Ihr Browser unterstützt die Audiowiedergabe nicht.
     </audio>
 

@@ -60,6 +60,7 @@ body {
 
 .page {
   max-width: 1440px;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -359,7 +360,7 @@ footer button {
 
 #aMinfos {
   margin-top: 60px;
-  width: 100%;
+  width: fit-content;
 }
 
 #aboutMe {
@@ -619,12 +620,12 @@ footer {
   width: 650px;
   height: 540px;
   z-index: 5;
-  top: 65px;
+  top: 0px;
 }
 
 .buyPopupContent {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   flex-direction: column;
   background-color: #efe9e2;
@@ -923,17 +924,14 @@ footer {
   }
 
   .shopLinks {
-    width: 80%;
+    width: 90%;
   }
 
   .buyBackground{
     height: 630px;
   }
 
-  #aMinfos{
-        margin-left: 16px;
-  }
-
+ 
   .musicTop{
         flex-direction: column;
   }
@@ -1080,12 +1078,21 @@ footer {
 
   .profileInfo {
     width: 100%;
-    padding-inline: 0;
+    padding-inline: 0px;
+  }
+
+  .profileInfoDiv{
+    padding-inline: 16px;
+  }
+
+  .profileInfoUl{
+    padding-inline-start: 56px;
+    padding-inline-end: 16px;
   }
 
   /* MUSIC */
   #music {
-    padding-inline: 12px;
+    padding-inline: 16px;
   }
 
   .imgMusic {
