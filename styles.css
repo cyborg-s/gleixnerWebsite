@@ -823,7 +823,65 @@ footer {
     width: 100%;
 }
 
+/* Impressum / Datenschutz */
 
+.legalPage {
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    padding: 32px 16px;
+
+    box-sizing: border-box;
+}
+
+/* Überschriften */
+
+.legalPage h1 {
+
+    margin-bottom: 2rem;
+}
+
+.legalPage h2 {
+
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Text */
+
+.legalPage p {
+
+    line-height: 1.6;
+
+    margin-bottom: 1rem;
+}
+
+/* Links */
+
+.legalPage a {
+
+    color: inherit;
+
+    text-decoration: underline;
+}
+
+.legalPage a:hover {
+
+    opacity: 0.8;
+}
+
+.legalPage {
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 32px 16px;
+}
 
 
 
@@ -956,6 +1014,10 @@ footer {
 
   .audio-preview h3{
     text-align: center;
+  }
+
+  .legalPage {
+    padding-bottom: 100px;
   }
 }
 
@@ -1151,3 +1213,7 @@ footer {
     height: fit-content;
   }
 }
+
+
+
+
