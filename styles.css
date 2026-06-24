@@ -946,6 +946,10 @@ footer {
     width: 100%;
   }
 
+  .minBookInfo {
+    height: fit-content;
+  }
+
   .audio-preview{
     padding: 1rem 1.5rem 1rem 1.5rem;
   }
@@ -1067,6 +1071,7 @@ footer {
   .listItem {
     width: 100%;
     max-width: 320px;
+        padding-block-end: 34px;
   }
 
   .bookCover {
@@ -1143,6 +1148,6 @@ footer {
 
   .minHead{
     text-align: center;
-    height: 90px;
+    height: fit-content;
   }
 }
