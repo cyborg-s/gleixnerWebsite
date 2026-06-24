@@ -22,27 +22,49 @@ async function loadData() {
 }
 
 function loadOverview(data) {
+
   const overViewContainer = document.getElementById("overview");
+
+
+
+  const headlineText =
+  new Date() <= new Date(data.books.current.newUntil)
+    ? "Neuvorstellung meines Buches"
+    : "Mein aktuelles Buch";
+
+
+  console.log("Heute:", new Date());
+console.log("Stichtag:", data.books.current.newUntil);
 
   overViewContainer.innerHTML = `
 
         <h1 class="headFont pt20">Peter Gleixner</h1>
-        <h3 class="new">Neuvorstellung meines Buches</h3>
+        <h3 class="new">${headlineText}</h3>
+
         <div class="flex overviewDiv align">
           <div class="overviewText flex column align">
             <h2 class="headFont overviewHead overviewTitle alignLeft">${data.books.current.title}</h2>
             <h3 class="headFont overviewHead overviewSubTitle alignLeft">${data.books.current.subTitle}</h3>
+
             <p class="descriptionIntro">${data.books.current.descriptionIntro}</p>
             <p class="description">${data.books.current.description}</p>
-            <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
+
+            <button class="pt14 buyButton" onclick="loadBuyPopup('current')">
+              Jetzt Bestellen
+            </button>
           </div>
-            
+
           <div class="overviewCoverDiv flex center">
             <div class="overviewCoverShadow">
-              <img class="overviewCover" src="./IMG/buchCover.webp" alt="Buch Cover Spurenelemente" loading="lazy"> 
+              <img
+                class="overviewCover"
+                src="./IMG/buchCover.webp"
+                alt="Buch Cover Spurenelemente"
+                loading="lazy"
+              >
             </div>
           </div>
-      </div>
+        </div>
   `;
 }
 
