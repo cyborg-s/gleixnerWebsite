@@ -945,6 +945,14 @@ footer {
   .buyBackground{
     width: 100%;
   }
+
+  .audio-preview{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .audio-preview h3{
+    text-align: center;
+  }
 }
 
 
