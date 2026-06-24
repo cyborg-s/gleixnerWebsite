@@ -517,9 +517,9 @@ function loadMusic(data) {
 
     <p>
         Hören Sie den Song <strong>"Soul - Balade"</strong>.<br>
-        Komposition: Peter Gleixner<br>
-        Gesang: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister, Carola Brehms<br>
-        Klavier: Peter Gleixner
+        <strong>Komposition</strong>: Peter Gleixner<br>
+        <strong>Gesang</strong>: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister, Carola Brehms<br>
+        <strong>Klavier</strong>: Peter Gleixner
     </p>
 </section>
 
