@@ -38,8 +38,8 @@ console.log("Stichtag:", data.books.current.newUntil);
 
   overViewContainer.innerHTML = `
 
-        <h1 class="headFont pt20">Peter Gleixner</h1>
-        <h3 class="new">${headlineText}</h3>
+
+        <h3 class="headFont pt20 new">${headlineText}</h3>
 
         <div class="flex overviewDiv align">
           <div class="overviewText flex column align">
@@ -58,8 +58,8 @@ console.log("Stichtag:", data.books.current.newUntil);
             <div class="overviewCoverShadow">
               <img
                 class="overviewCover"
-                src="./IMG/buchCover.webp"
-                alt="Buch Cover Spurenelemente"
+                src="${data.books.current.image}"
+                alt="${data.books.current.alternateText}"
                 loading="lazy"
               >
             </div>
@@ -101,7 +101,7 @@ function loadBuyPopup(bookKey, index = null) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/amazon.webp" alt="Amazon" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/amazon.webp" alt="Amazon Logo" loading="lazy">
     </a>
   `;
   }
@@ -113,7 +113,7 @@ function loadBuyPopup(bookKey, index = null) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/thalia.webp" alt="Thalia" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/thalia.webp" alt="Thalia Logo" loading="lazy">
     </a>
   `;
   }
@@ -125,7 +125,7 @@ function loadBuyPopup(bookKey, index = null) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img class="shopLinkIco" src="./IMG/hugendubel.webp" alt="Hugendubel" loading="lazy">
+      <img class="shopLinkIco" src="./IMG/hugendubel.webp" alt="Hugendubel Logo" loading="lazy">
     </a>
   `;
   }
@@ -137,7 +137,7 @@ function loadBuyPopup(bookKey, index = null) {
         <div class="popupCoverShadow">    
           <img class="buyCover"
                 src="${book.image}"
-                alt="${book.title}"
+                alt="${book.alternateText}"
                 loading="lazy"
             >
         </div>
@@ -192,7 +192,7 @@ function loadBooks(data) {
           <div class="minCover flex align"><img
             class="bookCover"
             src="${data.books.current.image}"
-            alt="buchcover"
+            alt="${data.books.current.alternateText}"
             loading="lazy"
           /></div>
           <div class="minBookInfo">
@@ -228,12 +228,12 @@ function loadBooks(data) {
                 <div class="minCover flex align"><img
                     class="bookCover"
                     src="${book.image}"
-                    alt="buchcover"
+                    alt="${book.alternateText}"
                     loading="lazy"
                 /></div>  
                 <div class="minBookInfo">
                 <div class="minHead"><h4>${book.title}</h4>
-                <h4>${book.subTitle}</h4></div>
+                <h4 style="text-align:center;">${book.subTitle}</h4></div>
                 <p>${book.info}</p>
                 <p class="textCenter">${book.publisher}</p>
                 <p>${book.ISBN}</p>
@@ -317,10 +317,10 @@ function loadAbout(data) {
       
       <div class="flex center pImgCont">
       <div class="overviewCoverShadow">      
-      <img class="profileImage" src="${data.aboutInfo.image}" alt="Peter Gleixner Foto" loading="lazy"></div></div>
+      <img class="profileImage" src="${data.aboutInfo.image}" alt="${data.aboutInfo.alternateText}" loading="lazy"></div></div>
       <div class="profileInfo">
         <div class="profileInfoDiv">
-          <h2 class="pt20">Peter Gleixner</h2>
+          <h1 class="pt20">Peter Gleixner</h1>
           <p class="pt16">* 1967 in Amberg,</p>
         </div>
         <ul class="profileInfoUl">
@@ -449,8 +449,7 @@ function loadImages(data) {
 
     imageContainer.innerHTML += `
   <div class="image" id="images"></div>
-  <a class="pt16 aboutLink" href="http://fotografie-sommer.de" target='_blank'>Fotografie Michael Sommer</a>`;
-
+  <a class="pt14 imgLink aboutLink" href="http://fotografie-sommer.de" target='_blank'>fotografie-sommer.de</a>`;
   pictures.forEach((picture) => {
     images.innerHTML += `
 
@@ -517,7 +516,7 @@ function loadMusic(data) {
   const list = data.music.list;
 
   imageContainer.innerHTML = `
-  <h2 class="headFont pt20">Musik</h2>
+  <div class="bookHeaderDiv flex center"><h2 class="headFont pt24">Musik</h2></div>
   <div >
     <div class="flex align musicTop">
       <ul id="musicList" class="profileInfoUl"></ul>
@@ -538,7 +537,8 @@ function loadMusic(data) {
     </audio>
 
     <p>
-        Hören Sie den Song <strong>"Soul - Balade"</strong>.<br>
+        <strong>Song</strong>:"Reality"<br>    
+        Soul - Balade<br>
         <strong>Komposition</strong>: Peter Gleixner<br>
         <strong>Gesang</strong>: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister, Carola Brehms<br>
         <strong>Klavier</strong>: Peter Gleixner
@@ -547,6 +547,43 @@ function loadMusic(data) {
 
   <p class="pt14 musicDescription">${data.music.description}</p></div>
 
+
+  <section class="audio-preview">
+    <h3>Hörproben von Heinz Grobmeier & Peter Gleixner</h3>
+
+    <audio controls preload="none">
+        <source src="./audio/ohneTitel.mp3" type="audio/mpeg">
+        Ihr Browser unterstützt die Audiowiedergabe nicht.
+    </audio>
+
+    <p>
+        <strong>Gedicht</strong>:"Ohne Titel"<br>    
+        <strong>Komposition / Klavier / Sprecher</strong>: Peter Gleixner<br>
+        <strong>Sopransaxophon</strong>: Heinz Grobmeier
+    </p>
+
+    <audio controls preload="none">
+        <source src="./audio/fernher.mp3" type="audio/mpeg">
+        Ihr Browser unterstützt die Audiowiedergabe nicht.
+    </audio>
+
+    <p>
+        <strong>Gedicht</strong>:"Fernher"<br>    
+        <strong>Komposition / Sprecher</strong>: Peter Gleixner<br>
+        <strong>Sopransaxophon</strong>: Heinz Grobmeier
+    </p>
+
+    <audio controls preload="none">
+        <source src="./audio/kinder.mp3" type="audio/mpeg">
+        Ihr Browser unterstützt die Audiowiedergabe nicht.
+    </audio>
+
+    <p>
+        <strong>Gedicht</strong>:"Kinder"<br>    
+        <strong>Komposition</strong>: Spieluhr<br>
+        <strong>Sprecher</strong>: Joseph Gleixner<br>
+    </p>
+</section>
   `;
 
   list.forEach((listItem) => {

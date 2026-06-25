@@ -8,6 +8,7 @@
       "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
       "image": "./IMG/buchCover.webp",
+      "alternateText":"Buchcover ‚Spurenelemente der Kommunikation‘ von Peter Gleixner, Seitenansicht eines Mannes, der einen Frosch ausspuckt1",
       "info": "",
       "publisher": "München: Verlagshaus Schlosser",
       "ISBN": "ISBN 3-758103-62-2",
@@ -20,9 +21,10 @@
     "moreBooks": [
       {
         "title": "Quadratur des Herzens",
-        "subTitle": "",
+        "subTitle": "[Gedichte]",
         "publisher": "Amberg: Selbstverl.",
         "image": "./IMG/quadraturDesHerzens.webp",
+        "alternateText":"Buchcover ,Quadratur des Herzens‘ von Peter Gleixner, Blau",
         "info": "mit Bildern von Wilkin Spitta",
         "ISBN": "",
         "linkBuy": "Quadratur des Herzens",
@@ -36,6 +38,7 @@
         "subTitle": "[Gedichte, Bilder, Musik]",
         "publisher": "Amberg: Buch- & Kunst-Verl. Oberpfalz",
         "image": "./IMG/lebenIstNichtGenug.webp",
+        "alternateText":"Buchcover ,Leben ist nicht Genug‘ von Peter Gleixner, Landschaft",
         "info": "mit Bildern von Günter Moser",
         "ISBN": "ISBN 3-924350-98-1 ",
         "linkBuy": "Leben ist nicht Genug",
@@ -60,8 +63,8 @@
         "info": "[Gedichte], Amberg: Sudhang-Verl., 1994, 31 S. (Vergriffen)"
       },
       {
-        "title": "Zwischen den Kreisen des Bussards träumt der Wind,",
-        "info": "Amberg: Sudhang-Verl., 1997, 29 S. (Vergriffen)"
+        "title": "Zwischen den Kreisen des Bussards träumt der Wind",
+        "info": "[Gedichte], Amberg: Sudhang-Verl., 1997, 29 S. (Vergriffen)"
       },
       {
         "title": "Der Mut zum Sein bedeutet die Eigentlichkeit. Meine Lebensgeschichte, ",
@@ -73,41 +76,40 @@
   "practice": {
     "head": "Peter Gleixner – Praxis für Sprachtherapie",
     "text": "<li>Sprachtherapeut für Stimm-, Sprech- und Sprachstörungen</li><li>Heilpädagoge mit Schwerpunkt Sprachheilpädagogik</li><li>Therapeut für Sensorische Integration (nach Jean Ayres)</li><li>Psychologische Beratung und Unterstützung</li> ",
-    "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. <a href='tel:+49962133106'> 09621-33106</a><br>Fax: 09621-602995<br>E-Mail: <a href='mailto:praxis.gleixner@gmail.com'>praxis.gleixner@gmail.com</a><br>",
-    "image": "./IMG/map.webp"
+    "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. <a href='tel:+49962133106'> 09621-33106</a><br>Fax: 09621-602995<br>E-Mail: <a href='mailto:praxis.gleixner@gmail.com'>praxis.gleixner@gmail.com</a><br>"
   },
 
   "aboutInfo": {
     "image": "./IMG/profileImg.webp",
+    "alternateText":"Portrait des Autors",
     "pictures": [
       {
-        "IMG": "./IMG/IMG1.webp",
-        "alternateText": ""
+        "IMG": "./IMG/IMG3.webp",
+        "alternateText": "Peter Gleixner hällt eine Pfeife und steht vor einem Teich"
       },
       {
         "IMG": "./IMG/IMG2.webp",
-        "alternateText": ""
-      },
-      {
-        "IMG": "./IMG/IMG3.webp",
-        "alternateText": ""
+        "alternateText": "Autor mit Pfeife vor einer Holzwand"
       },
       {
         "IMG": "./IMG/IMG4.webp",
-        "alternateText": ""
+        "alternateText": "Peter Gleixner vor einer Roten Wand"
       },
-      
+      {
+        "IMG": "./IMG/IMG1.webp",
+        "alternateText": "Autor mit Pfeife vor einer Wiese mit Weg"
+      },
       {
         "IMG": "./IMG/IMG6.webp",
-        "alternateText": ""
+        "alternateText": "Portrait von Peter Gleixner, er trägt eine Mütze"
       },
       {
         "IMG": "./IMG/IMG7.webp",
-        "alternateText": ""
+        "alternateText": "Portrait des Autors in Jüngeren Jahren sitzt auf einer Teppe vor Efeu"
       },
       {
         "IMG": "./IMG/IMG8.webp",
-        "alternateText": ""
+        "alternateText": "Schwarzweiß Portait von Peter Gleixner"
       }
     ]
   },
@@ -128,7 +130,7 @@
     "description": "Peter Gleixner wurde hauptsächlich für seine „Musiklesungen“ bekannt, oft in Zusammenarbeit mit dem Multiinstrumentalisten und Komponisten <a target='_blank' class='aboutLink pt16' href='https://heinzgrobmeier.de/'>Heinz Grobmeier</a>. Als Duo waren sie in ganz Bayern unterwegs. Der Autor rezitierte seine Texte und begleitete sich selbst am Klavier, während Grobmeier mit klangmalerischer Musik die Grundstimmung der Texte einfühlsam verstärkte. Die Gedichte, die als Grundlage für mehrere Performance-Projekte dienten, wurden u. a. als „entschleunigt“ und „witzig“ beschrieben. Sie zeichnen sich aus durch eine Mischung aus Skurrilem, Träumerischem und kritischer Reflexion über Themen wie das Leben, die Zeit und die Natur. Seine Erfahrungen als Sprachtherapeut und Heilpädagoge fließen dabei oft subtil in die künstlerische Arbeit ein, bei der der bewusste Umgang mit Sprache und Stimme ein verbindendes Element darstellt.",
     "img":{
       "img":"./IMG/imgMusic.webp",
-      "alt":""
+      "alt":"Peter Gleixner spielt am Keybord"
     }
   }
 }

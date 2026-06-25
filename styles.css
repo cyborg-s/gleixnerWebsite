@@ -81,6 +81,12 @@ body {
   text-decoration: underline;
 }
 
+.imgLink{
+  text-align: end;
+  width: stretch;
+  padding-right: 180px;
+}
+
 .allBooksList {
   gap: 4px;
 }
@@ -299,7 +305,7 @@ footer button {
 
 .bookHeaderDiv{
   width: 100%;
-  margin-left: 100px;
+  padding-bottom: 40px;
 }
 
 .alignLeft {
@@ -381,7 +387,7 @@ footer button {
 
 .image {
   height: 100%;
-  margin-block: 38px;
+  margin-block: 38px 10px;
   padding-bottom: -20px;
   display: flex;
   flex-wrap: wrap;
@@ -404,7 +410,7 @@ footer {
 }
 
 .bookCover {
-  width: 160px;
+  height: 228px;
   border-radius: 8px;
 }
 
@@ -458,6 +464,10 @@ footer {
 .overviewSubTitle {
   margin-top: 0;
   font-size: 1.25rem;
+}
+
+.pt24 {
+  font-size: 2rem;
 }
 
 .pt20 {
@@ -1025,6 +1035,11 @@ footer {
   .legalPage {
     padding-bottom: 100px;
   }
+
+    .bookCover {
+    height: auto;
+    width: 160px;
+    }
 }
 
 
@@ -1131,6 +1146,12 @@ footer {
     width: 45%;
     font-size: 14px;
   }
+
+  .imgLink{
+  text-align: center;
+  width: auto;
+  padding-right: 0;
+}
 
   /* BÜCHER */
   .list {
