@@ -2,15 +2,15 @@
   "books": {
     "current": {
       "newUntil":"2026-12-06",
-      "title": "Spurenelemente der Kommunikation.",
-      "subTitle": "Gedanken eines Sprachtherapeuten.",
+      "title": "Spurenelemente der Kommunikation",
+      "subTitle": "Gedanken eines Sprachtherapeuten,",
       "descriptionIntro": "<b>Inmitten unserer zunehmend technisierten, digitalen Welt steht dieses Buch für eine Rückbesinnung auf das Wesentliche und ist zugleich eine Liebeserklärung an das Leben.</b>",
       "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
       "image": "./IMG/buchCover.webp",
       "alternateText":"Buchcover ‚Spurenelemente der Kommunikation‘ von Peter Gleixner, Seitenansicht eines Mannes, der einen Frosch ausspuckt1",
       "info": "",
-      "publisher": "München: Verlagshaus Schlosser",
+      "publisher": "München: Verlagshaus Schlosser, <br> 2026, 54 S.",
       "ISBN": "ISBN 3-758103-62-2",
       "linkBuy": "",
       "linkAmazon": "https://www.amazon.de/dp/3758103622/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=841788WH9W5L&dib=eyJ2IjoiMSJ9.6mCuoyYqYfkh7XE9FzrdcOyIK-4hY_fLmjH3X5t6NSpQ8Zf9D-cxlP3CM42RD4qBa6_0UAfASWf6irYDD4UUAviN3VLgp9xqXVGFunRD_NFGdI8Bf891TsD-v36ViMraKk4-xWXEB6S3elQ1L9GpsFfwg2Pfcf9UGap_YPHhO-_0Mf4Tnougt4Vt_1dQ6fs9.TSADCx_g_1FGVVXtehjsXvUaVKxGruUQ9qswr5Vmkq4&dib_tag=se&keywords=spurenelemente+der+kommunikation&qid=1781596451&sprefix=spurenelemente+der+kommunikation%2Caps%2C100&sr=8-1",
@@ -22,10 +22,10 @@
       {
         "title": "Quadratur des Herzens",
         "subTitle": "[Gedichte]",
-        "publisher": "Amberg: Selbstverl.",
+        "publisher": "Amberg: Selbstverl.<br>2007, 85 S., zahlr. Illustr.",
         "image": "./IMG/quadraturDesHerzens.webp",
         "alternateText":"Buchcover ,Quadratur des Herzens‘ von Peter Gleixner, Blau",
-        "info": "mit Bildern von Wilkin Spitta",
+        "info": "mit Bildern von Wilkin Spitta,",
         "ISBN": "",
         "linkBuy": "Quadratur des Herzens",
         "price":"15.00€",
@@ -34,12 +34,12 @@
         "linkHugendubel": ""
       },
       {
-        "title": "Leben ist nicht Genug",
+        "title": "Leben ist nicht genug",
         "subTitle": "[Gedichte, Bilder, Musik]",
-        "publisher": "Amberg: Buch- & Kunst-Verl. Oberpfalz",
+        "publisher": "Amberg: Buch- & Kunst-Verl. Oberpfalz,<br> 2001, 95 S., Illustr. und CD",
         "image": "./IMG/lebenIstNichtGenug.webp",
-        "alternateText":"Buchcover ,Leben ist nicht Genug‘ von Peter Gleixner, Landschaft",
-        "info": "mit Bildern von Günter Moser",
+        "alternateText":"Buchcover ,Leben ist nicht genug‘ von Peter Gleixner, Landschaft",
+        "info": "mit Bildern von Günter Moser,",
         "ISBN": "ISBN 3-924350-98-1 ",
         "linkBuy": "Leben ist nicht Genug",
         "price":"15.00€",
@@ -52,23 +52,23 @@
     "allBooks": [
       {
         "title": "Neues Testament, ",
-        "info": "Amberg: Sudhang-Verl., 1991, 52 S., Illustr. (Vergriffen)"
+        "info": "Amberg: Sudhang-Verl., 1991, 52 S., Illustr. "
       },
       {
         "title": "Sprung in neumondkühles Wasser ",
-        "info": "[Gedichte], Amberg: Sudhang-Verl., 1991, 52 S., Illustr. (Vergriffen)"
+        "info": "[Gedichte], Amberg: Sudhang-Verl., 1991, 52 S., Illustr. "
       },
       {
         "title": "Zellstoff",
-        "info": "[Gedichte], Amberg: Sudhang-Verl., 1994, 31 S. (Vergriffen)"
+        "info": "[Gedichte], Amberg: Sudhang-Verl., 1994, 31 S. "
       },
       {
         "title": "Zwischen den Kreisen des Bussards träumt der Wind",
-        "info": "[Gedichte], Amberg: Sudhang-Verl., 1997, 29 S. (Vergriffen)"
+        "info": "[Gedichte], Amberg: Sudhang-Verl., 1997, 29 S. "
       },
       {
         "title": "Der Mut zum Sein bedeutet die Eigentlichkeit. Meine Lebensgeschichte, ",
-        "info": "Mausdorf: Selbstverl., 2023, 143 S. (Vergriffen)"
+        "info": "Mausdorf: Selbstverl., 2023, 143 S. "
       }
     ]
   },

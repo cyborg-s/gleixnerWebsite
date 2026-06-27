@@ -50,13 +50,14 @@ console.log("Stichtag:", data.books.current.newUntil);
             <p class="description">${data.books.current.description}</p>
 
             <button class="pt14 buyButton" onclick="loadBuyPopup('current')">
-              Jetzt Bestellen
+              Jetzt bestellen
             </button>
           </div>
 
           <div class="overviewCoverDiv flex center">
             <div class="overviewCoverShadow">
               <img
+              onclick="loadBuyPopup('current')"
                 class="overviewCover"
                 src="${data.books.current.image}"
                 alt="${data.books.current.alternateText}"
@@ -190,6 +191,7 @@ function loadBooks(data) {
       <div class="flex column space listItem">
         <div class="flex column align">
           <div class="minCover flex align"><img
+          onclick="loadBuyPopup('current')"
             class="bookCover"
             src="${data.books.current.image}"
             alt="${data.books.current.alternateText}"
@@ -199,11 +201,11 @@ function loadBooks(data) {
           <div class="minHead"><h4>${data.books.current.title}</h4>
           <h4>${data.books.current.subTitle}</h4></div>
           <p>${data.books.current.info}</p>
-                <p>${data.books.current.publisher}</p>
+                <p class="textCenter">${data.books.current.publisher}</p>
                 <p>${data.books.current.ISBN}</p>
           </div>
         </div>
-        <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt Bestellen</button>
+        <button class="pt14 buyButton" onclick="loadBuyPopup('current')">Jetzt bestellen</button>
       </div>
 
     </div>
@@ -226,6 +228,7 @@ function loadBooks(data) {
             <div class="flex column listItem space">
               <div class="flex column align">    
                 <div class="minCover flex align"><img
+                  onclick="loadBuyPopup('moreBooks', ${index})"
                     class="bookCover"
                     src="${book.image}"
                     alt="${book.alternateText}"
@@ -238,7 +241,7 @@ function loadBooks(data) {
                 <p class="textCenter">${book.publisher}</p>
                 <p>${book.ISBN}</p>
               </div></div>
-              <button class="pt14 buyButton" onclick="loadBuyPopup('moreBooks', ${index})">Jetzt Bestellen</button>
+              <button class="pt14 buyButton" onclick="loadBuyPopup('moreBooks', ${index})">Jetzt bestellen</button>
             </div>
             `,
           )
@@ -329,8 +332,8 @@ function loadAbout(data) {
         <li class="pt14">  <a class="aboutLink" onclick="activate('musicButton', 'music')" href="#music">Musiker</a></li>
         <li class="pt14">  Freizeitbauer</li>
         <li class="pt14">  Naturliebhaber</li>
-        <li class="pt14">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</li>
-      </ul></div>
+        
+      </ul><p class="pt14">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg</p></div>
     </div>`;
 }
 
