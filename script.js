@@ -333,7 +333,7 @@ function loadAbout(data) {
         <li class="pt14">  Freizeitbauer</li>
         <li class="pt14">  Naturliebhaber</li>
         
-      </ul><p class="profileInfoDiv pt14">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg</p></div>
+      </ul><p class="profileInfoDiv pt14">Der Autor lebt auf seinem kleinen Bauernhof in der Nähe von Amberg.</p></div>
     </div>`;
 }
 
