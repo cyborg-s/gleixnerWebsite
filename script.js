@@ -541,7 +541,7 @@ function loadMusic(data) {
 
     <p>
         <strong>Song</strong>:"Reality"<br>    
-        Soul - Balade<br>
+        Soulballade<br>
         <strong>Komposition</strong>: Peter Gleixner<br>
         <strong>Gesang</strong>: Andrea "Bibi" Bibel, Michael Deiml, Franky Meister, Carola Brehms<br>
         <strong>Klavier</strong>: Peter Gleixner

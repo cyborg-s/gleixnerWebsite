@@ -3,7 +3,7 @@
     "current": {
       "newUntil":"2026-12-06",
       "title": "Spurenelemente der Kommunikation",
-      "subTitle": "Gedanken eines Sprachtherapeuten,",
+      "subTitle": "Gedanken eines Sprachtherapeuten",
       "descriptionIntro": "<b>Inmitten unserer zunehmend technisierten, digitalen Welt steht dieses Buch für eine Rückbesinnung auf das Wesentliche und ist zugleich eine Liebeserklärung an das Leben.</b>",
       "description": "<br>Es ist ein Buch über Kommunikation und Lebenskunst. Ausgehend von den natürlichen Grundlagen der Kommunikation und der Entstehung von Sprache, spannt der Autor den Bogen von seinen Erfahrungen als Therapeut bis hin zu existenziellen Fragen und persönlicher Sinnsuche. „Spurenelemente der Kommunikation“ beschäftigt sich mit dem Sprechen bzw. Miteinander-Sprechen und verbindet dabei auf originelle Weise logopädisches Fachwissen mit philosophischen Gedanken und einfühlsamer Naturbeobachtung. <br><br>Dieser unkonventionelle Lebensratgeber veranschaulicht anhand konkreter Beispiele, wie Achtsamkeit und Verständnis zu einem erfüllten Miteinander und zu innerer Zufriedenheit führen können.",
       "subDescription": "Zielgruppe: Eltern und Erziehende, Menschen in Heilberufen sowie Leser, die sich für Psychologie, Kommunikation und persönliche Weiterentwicklung interessieren.",
@@ -76,7 +76,7 @@
   "practice": {
     "head": "Peter Gleixner – Praxis für Sprachtherapie",
     "text": "<li>Sprachtherapeut für Stimm-, Sprech- und Sprachstörungen</li><li>Heilpädagoge mit Schwerpunkt Sprachheilpädagogik</li><li>Therapeut für Sensorische Integration (nach Jean Ayres)</li><li>Psychologische Beratung und Unterstützung</li> ",
-    "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. <a href='tel:+49962133106'> 09621-33106</a><br>Fax: 09621-602995<br>E-Mail: <a href='mailto:praxis.gleixner@gmail.com'>praxis.gleixner@gmail.com</a><br>"
+    "contact": "<b>Praxis für Sprachtherapie (alle Kassen)</b><br>Studentenplatz 6<br>D-92224 Amberg<br>Tel. <a class='decoration' href='tel:+49962133106'> 09621-33106</a><br>Fax: 09621-602995<br>E-Mail: <a href='mailto:praxis.gleixner@gmail.com'>praxis.gleixner@gmail.com</a><br>"
   },
 
   "aboutInfo": {
